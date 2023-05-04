@@ -28,20 +28,34 @@ class _ProfileState extends State<Profile> {
                   children: [
                     Padding(
                       padding: EdgeInsets.all(12.0),
-                      child: Row(children: [
-                        SvgPicture.asset("assets/back.svg"),
-                        SizedBox(width: 30,),
-                        Text('Personal Details' , style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold , fontSize: 17),),
-                      ],),
-                    ),
-                    Center(
-                      child: CircleAvatar(
-                        foregroundColor: Colors.white,
-                        radius: 50,
-                        backgroundImage: AssetImage("assets/bg.png"),
+                      child: Row(
+                        children: [
+                          GestureDetector(
+                              onTap: () => Navigator.pushNamed(context, "/"),
+                              child: SvgPicture.asset("assets/back.svg")),
+                          SizedBox(
+                            width: 30,
+                          ),
+                          Text(
+                            'Personal Details',
+                            style: TextStyle(
+                                color: Colors.white,
+                                fontWeight: FontWeight.bold,
+                                fontSize: 17),
+                          ),
+                        ],
                       ),
                     ),
-
+                    Hero(
+                      tag: "user",
+                      child: Center(
+                        child: CircleAvatar(
+                          foregroundColor: Colors.white,
+                          radius: 50,
+                          backgroundImage: AssetImage("assets/demo_phonto.png"),
+                        ),
+                      ),
+                    ),
                     Padding(
                       padding: const EdgeInsets.all(8.0),
                       child: Text(
@@ -62,23 +76,30 @@ class _ProfileState extends State<Profile> {
                             fontSize: 12),
                       ),
                     ),
-
-                    SizedBox(height: 20,),
+                    SizedBox(
+                      height: 20,
+                    ),
                     Padding(
                       padding: const EdgeInsets.all(20.0),
                       child: MaterialButton(
                           shape: RoundedRectangleBorder(
-                              borderRadius: BorderRadius.all(Radius.circular(7.0))),
+                              borderRadius:
+                                  BorderRadius.all(Radius.circular(7.0))),
                           color: Colors.white,
                           highlightColor: Colors.white,
                           splashColor: Colors.blueAccent,
                           child: Padding(
                               padding: EdgeInsets.symmetric(
-                                  vertical: size.height/40),
+                                  vertical: size.height / 40),
                               child: Row(
                                 children: [
-                                  Icon(Icons.person, color: Colors.blueAccent,),
-                                  SizedBox(width: 20,),
+                                  Icon(
+                                    Icons.person,
+                                    color: Colors.blueAccent,
+                                  ),
+                                  SizedBox(
+                                    width: 20,
+                                  ),
                                   Text(
                                     "Personal Details",
                                     style: TextStyle(
@@ -88,24 +109,29 @@ class _ProfileState extends State<Profile> {
                                   ),
                                 ],
                               )),
-                          onPressed: () {}
-                      ),
+                          onPressed: () {}),
                     ),
                     Padding(
                       padding: const EdgeInsets.all(20.0),
                       child: MaterialButton(
                           shape: RoundedRectangleBorder(
-                              borderRadius: BorderRadius.all(Radius.circular(7.0))),
+                              borderRadius:
+                                  BorderRadius.all(Radius.circular(7.0))),
                           color: Colors.white,
                           highlightColor: Colors.white,
                           splashColor: Colors.blueAccent,
                           child: Padding(
                               padding: EdgeInsets.symmetric(
-                                  vertical: size.height/40),
+                                  vertical: size.height / 40),
                               child: Row(
                                 children: [
-                                  Icon(Icons.privacy_tip_outlined, color: Colors.blueAccent,),
-                                  SizedBox(width: 20,),
+                                  Icon(
+                                    Icons.privacy_tip_outlined,
+                                    color: Colors.blueAccent,
+                                  ),
+                                  SizedBox(
+                                    width: 20,
+                                  ),
                                   Text(
                                     "Privacy Policy",
                                     style: TextStyle(
@@ -115,24 +141,29 @@ class _ProfileState extends State<Profile> {
                                   ),
                                 ],
                               )),
-                          onPressed: () {}
-                      ),
+                          onPressed: () {}),
                     ),
                     Padding(
                       padding: const EdgeInsets.all(20.0),
                       child: MaterialButton(
                           shape: RoundedRectangleBorder(
-                              borderRadius: BorderRadius.all(Radius.circular(7.0))),
+                              borderRadius:
+                                  BorderRadius.all(Radius.circular(7.0))),
                           color: Colors.white,
                           highlightColor: Colors.white,
                           splashColor: Colors.blueAccent,
                           child: Padding(
                               padding: EdgeInsets.symmetric(
-                                  vertical: size.height/40),
+                                  vertical: size.height / 40),
                               child: Row(
                                 children: [
-                                  Icon(Icons.credit_card_rounded, color: Colors.blueAccent,),
-                                  SizedBox(width: 20,),
+                                  Icon(
+                                    Icons.credit_card_rounded,
+                                    color: Colors.blueAccent,
+                                  ),
+                                  SizedBox(
+                                    width: 20,
+                                  ),
                                   Text(
                                     "Complaints",
                                     style: TextStyle(
@@ -142,24 +173,29 @@ class _ProfileState extends State<Profile> {
                                   ),
                                 ],
                               )),
-                          onPressed: () {}
-                      ),
+                          onPressed: () {}),
                     ),
                     Padding(
                       padding: const EdgeInsets.all(20.0),
                       child: MaterialButton(
                           shape: RoundedRectangleBorder(
-                              borderRadius: BorderRadius.all(Radius.circular(7.0))),
+                              borderRadius:
+                                  BorderRadius.all(Radius.circular(7.0))),
                           color: Colors.white,
                           highlightColor: Colors.white,
                           splashColor: Colors.blueAccent,
                           child: Padding(
                               padding: EdgeInsets.symmetric(
-                                  vertical: size.height/40),
+                                  vertical: size.height / 40),
                               child: Row(
                                 children: [
-                                  Icon(Icons.settings, color: Colors.blueAccent,),
-                                  SizedBox(width: 20,),
+                                  Icon(
+                                    Icons.settings,
+                                    color: Colors.blueAccent,
+                                  ),
+                                  SizedBox(
+                                    width: 20,
+                                  ),
                                   Text(
                                     "Account Settings",
                                     style: TextStyle(
@@ -169,23 +205,28 @@ class _ProfileState extends State<Profile> {
                                   ),
                                 ],
                               )),
-                          onPressed: () {}
-                      ),
+                          onPressed: () {}),
                     ),
                     Padding(
                       padding: const EdgeInsets.all(20.0),
                       child: MaterialButton(
                           shape: RoundedRectangleBorder(
-                              borderRadius: BorderRadius.all(Radius.circular(7.0))),
+                              borderRadius:
+                                  BorderRadius.all(Radius.circular(7.0))),
                           highlightColor: Colors.white,
                           splashColor: Colors.blueAccent,
                           child: Padding(
                               padding: EdgeInsets.symmetric(
-                                  vertical: size.height/40),
+                                  vertical: size.height / 40),
                               child: Row(
                                 children: [
-                                  Icon(Icons.logout, color: Colors.white,),
-                                  SizedBox(width: 20,),
+                                  Icon(
+                                    Icons.logout,
+                                    color: Colors.white,
+                                  ),
+                                  SizedBox(
+                                    width: 20,
+                                  ),
                                   Text(
                                     "Log Out",
                                     style: TextStyle(
@@ -195,10 +236,8 @@ class _ProfileState extends State<Profile> {
                                   ),
                                 ],
                               )),
-                          onPressed: () {}
-                      ),
+                          onPressed: () {}),
                     ),
-
                   ],
                 ),
               ),

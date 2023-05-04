@@ -31,15 +31,21 @@ class _Home_ScreenState extends State<Home_Screen> {
                   children: [
                     Stack(
                       children: [
-                        Container(
-                          height: MediaQuery.of(context).size.height * 0.07,
-                          width: MediaQuery.of(context).size.width * 0.13,
-                          decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(10),
-                            color: Colors.transparent,
-                            image: DecorationImage(
-                              image: AssetImage('assets/demo_phonto.png'),
-                              fit: BoxFit.fill,
+                        Hero(
+                          tag: "user",
+                          child: GestureDetector(
+                            onTap: () => Navigator.pushNamed(context, "/profile"),
+                            child: Container(
+                              height: MediaQuery.of(context).size.height * 0.07,
+                              width: MediaQuery.of(context).size.width * 0.13,
+                              decoration: BoxDecoration(
+                                borderRadius: BorderRadius.circular(10),
+                                color: Colors.transparent,
+                                image: DecorationImage(
+                                  image: AssetImage('assets/demo_phonto.png'),
+                                  fit: BoxFit.fill,
+                                ),
+                              ),
                             ),
                           ),
                         ),
