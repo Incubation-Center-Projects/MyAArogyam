@@ -208,7 +208,7 @@ class _ProfileState extends State<Profile> {
                           onPressed: () {}),
                     ),
                     Padding(
-                      padding: const EdgeInsets.all(20.0),
+                      padding: const EdgeInsets.all(8.0),
                       child: MaterialButton(
                           shape: RoundedRectangleBorder(
                               borderRadius:
