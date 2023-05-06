@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:myaarogyam/auth/login.dart';
+import 'package:myaarogyam/doctor_details/doctor_details_page.dart';
 
 class DoctorScreen extends StatelessWidget {
   const DoctorScreen({super.key});
@@ -7,30 +8,30 @@ class DoctorScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color(0xFFF5F5F5),
+      backgroundColor: Color(0xFFFFFFFF),
       body: SafeArea(
         child: SingleChildScrollView(
           child: Column(
             children: [
               Row(
                 children: [
-                  IconButton(
-                    onPressed: () {
-                      Navigator.pop(context);
-                    },
-                    icon: Container(
-                        height: 44,
-                        width: 44,
-                        decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(10),
-                          color: Color(0xFFEEF6FC),
-                          border: Border.all(color: Color(0xFFD7DEEA)),
-                        ),
-                        child: Icon(
-                          Icons.arrow_back,
-                          size: 13,
-                          color: Color.fromARGB(255, 9, 9, 9),
-                        )),
+                  GestureDetector(
+                    child: Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: Container(
+                          height: MediaQuery.of(context).size.height * 0.06,
+                          width: MediaQuery.of(context).size.width * 0.12,
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(16),
+                            color: Color(0xFFFFFFFF),
+                            border: Border.all(color: Color(0xFFD7DEEA)),
+                          ),
+                          child: Icon(
+                            Icons.arrow_back,
+                            size: 18,
+                            color: Color.fromARGB(255, 9, 9, 9),
+                          )),
+                    ),
                   ),
                   SizedBox(
                     width: 80,
@@ -54,7 +55,7 @@ class DoctorScreen extends StatelessWidget {
                   color: Color(
                     0xFFEEF6FC,
                   ),
-                  borderRadius: BorderRadius.circular(25),
+                  borderRadius: BorderRadius.circular(18),
                 ),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -78,7 +79,9 @@ class DoctorScreen extends StatelessWidget {
                     ),
                     IconButton(
                       onPressed: () {},
-                      icon: Icon(Icons.filter_alt_outlined),
+                      icon: Image.asset(
+                        'assets/Vector.png',
+                      ),
                       color: Colors.black,
                     ),
                   ],
@@ -107,59 +110,17 @@ class DoctorScreen extends StatelessWidget {
                   ),
                   SingleChildScrollView(
                     scrollDirection: Axis.horizontal,
-                    child: Row(
-                      children: [
-                        Padding(padding: EdgeInsets.only(left: 20)),
-                        Container(
-                          height: 91,
-                          width: 91,
-                          decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(10),
-                            image: DecorationImage(
-                              image: AssetImage('assets/dr.png'),
-                            ),
-                          ),
-                        ),
-                        SizedBox(
-                          height: 20,
-                        ),
-                        Container(
-                          height: 91,
-                          width: 91,
-                          decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(10),
-                            image: DecorationImage(
-                              image: AssetImage('assets/dr.png'),
-                            ),
-                          ),
-                        ),
-                        SizedBox(
-                          height: 20,
-                        ),
-                        Container(
-                          height: 91,
-                          width: 91,
-                          decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(10),
-                            image: DecorationImage(
-                              image: AssetImage('assets/dr.png'),
-                            ),
-                          ),
-                        ),
-                        SizedBox(
-                          height: 20,
-                        ),
-                        Container(
-                          height: 91,
-                          width: 91,
-                          decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(10),
-                            image: DecorationImage(
-                              image: AssetImage('assets/dr.png'),
-                            ),
-                          ),
-                        ),
-                      ],
+                    child: Expanded(
+                      child: Row(
+                        children: [
+                          Padding(padding: EdgeInsets.only(left: 20)),
+                          LiveDoc(),
+                          LiveDoc(),
+                          LiveDoc(),
+                          LiveDoc(),
+                          LiveDoc(),
+                        ],
+                      ),
                     ),
                   ),
                 ],
@@ -490,6 +451,66 @@ class DoctorScreen extends StatelessWidget {
           ),
         ),
       ),
+    );
+  }
+}
+
+class LiveDoc extends StatefulWidget {
+  const LiveDoc({super.key});
+
+  @override
+  State<LiveDoc> createState() => _LiveDocState();
+}
+
+class _LiveDocState extends State<LiveDoc> {
+  @override
+  Widget build(BuildContext context) {
+    return Stack(
+      children: [
+        GestureDetector(
+          onTap: () {
+            Navigator.push(
+              context,
+              MaterialPageRoute(
+                builder: (context) => doctor_page_detials(),
+              ),
+            );
+          },
+          child: Container(
+            height: 91,
+            width: 91,
+            decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(10),
+              image: DecorationImage(
+                image: AssetImage('assets/dr.png'),
+              ),
+            ),
+          ),
+        ),
+        Positioned(
+          top: 5,
+          right: 5,
+          child: Container(
+            height: 20,
+            width: 20,
+            decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(10),
+              color: Colors.white,
+            ),
+            child: Padding(
+              padding: const EdgeInsets.all(2.5),
+              child: Container(
+                height: MediaQuery.of(context).size.height * 0.02,
+                width: MediaQuery.of(context).size.width * 0.02,
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(10),
+                  color: Colors.green,
+                ),
+              ),
+            ),
+          ),
+        ),
+      ],
     );
   }
 }

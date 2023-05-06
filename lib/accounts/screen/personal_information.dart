@@ -21,24 +21,40 @@ class _Personal_DetailsState extends State<Personal_Details> {
           child: Column(
             children: [
               Container(
-                height: size.height/4,
+                height: size.height / 4,
                 width: size.width,
                 color: Colors.amber,
                 child: Column(
                   children: [
                     Padding(
                       padding: EdgeInsets.all(12.0),
-                      child: Row(children: [
-                        SvgPicture.asset("assets/back.svg"),
-                        SizedBox(width: 30,),
-                        Text('Personal Details' , style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold , fontSize: 17),),
-                      ],),
+                      child: Row(
+                        children: [
+                          GestureDetector(
+                              onTap: () {
+                                Navigator.pop(context);
+                              },
+                              child: SvgPicture.asset("assets/back.svg")),
+                          SizedBox(
+                            width: 30,
+                          ),
+                          Text(
+                            'Personal Details',
+                            style: TextStyle(
+                              color: Colors.white,
+                              fontWeight: FontWeight.bold,
+                              fontSize: 17,
+                            ),
+                          ),
+                        ],
+                      ),
                     ),
                     Center(
                       child: CircleAvatar(
                         foregroundColor: Colors.white,
                         radius: 50,
-                        backgroundImage: AssetImage("assets/jpeg/register.jpeg"),
+                        backgroundImage:
+                            AssetImage("assets/jpeg/register.jpeg"),
                       ),
                     ),
                   ],
@@ -74,7 +90,8 @@ class _Personal_DetailsState extends State<Personal_Details> {
                       child: Column(
                         children: [
                           Padding(
-                            padding: EdgeInsets.only(left: 10.0, top: 10, bottom: 5),
+                            padding:
+                                EdgeInsets.only(left: 10.0, top: 10, bottom: 5),
                             child: Align(
                               alignment: Alignment.topLeft,
                               child: Text(
@@ -112,13 +129,14 @@ class _Personal_DetailsState extends State<Personal_Details> {
                           width: size.width / 2.5,
                           decoration: BoxDecoration(
                             color: Colors.white,
-                            borderRadius: BorderRadius.all(Radius.circular(20.0)),
+                            borderRadius:
+                                BorderRadius.all(Radius.circular(20.0)),
                           ),
                           child: Column(
                             children: [
                               Padding(
-                                padding:
-                                EdgeInsets.only(left: 10.0, top: 10, bottom: 5),
+                                padding: EdgeInsets.only(
+                                    left: 10.0, top: 10, bottom: 5),
                                 child: Align(
                                   alignment: Alignment.topLeft,
                                   child: Text(
@@ -151,13 +169,14 @@ class _Personal_DetailsState extends State<Personal_Details> {
                           width: size.width / 2.5,
                           decoration: BoxDecoration(
                             color: Colors.white,
-                            borderRadius: BorderRadius.all(Radius.circular(20.0)),
+                            borderRadius:
+                                BorderRadius.all(Radius.circular(20.0)),
                           ),
                           child: Column(
                             children: [
                               Padding(
-                                padding:
-                                EdgeInsets.only(left: 10.0, top: 10, bottom: 5),
+                                padding: EdgeInsets.only(
+                                    left: 10.0, top: 10, bottom: 5),
                                 child: Align(
                                   alignment: Alignment.topLeft,
                                   child: Text(
@@ -197,13 +216,14 @@ class _Personal_DetailsState extends State<Personal_Details> {
                           width: size.width / 2.5,
                           decoration: BoxDecoration(
                             color: Colors.white,
-                            borderRadius: BorderRadius.all(Radius.circular(20.0)),
+                            borderRadius:
+                                BorderRadius.all(Radius.circular(20.0)),
                           ),
                           child: Column(
                             children: [
                               Padding(
-                                padding:
-                                EdgeInsets.only(left: 10.0, top: 10, bottom: 5),
+                                padding: EdgeInsets.only(
+                                    left: 10.0, top: 10, bottom: 5),
                                 child: Align(
                                   alignment: Alignment.topLeft,
                                   child: Text(
@@ -237,13 +257,14 @@ class _Personal_DetailsState extends State<Personal_Details> {
                           width: size.width / 2.5,
                           decoration: BoxDecoration(
                             color: Colors.white,
-                            borderRadius: BorderRadius.all(Radius.circular(20.0)),
+                            borderRadius:
+                                BorderRadius.all(Radius.circular(20.0)),
                           ),
                           child: Column(
                             children: [
                               Padding(
-                                padding:
-                                EdgeInsets.only(left: 10.0, top: 10, bottom: 5),
+                                padding: EdgeInsets.only(
+                                    left: 10.0, top: 10, bottom: 5),
                                 child: Align(
                                   alignment: Alignment.topLeft,
                                   child: Text(
@@ -286,7 +307,8 @@ class _Personal_DetailsState extends State<Personal_Details> {
                       child: Column(
                         children: [
                           Padding(
-                            padding: EdgeInsets.only(left: 10.0, top: 10, bottom: 5),
+                            padding:
+                                EdgeInsets.only(left: 10.0, top: 10, bottom: 5),
                             child: Align(
                               alignment: Alignment.topLeft,
                               child: Text(
@@ -324,13 +346,14 @@ class _Personal_DetailsState extends State<Personal_Details> {
                           width: size.width / 2.5,
                           decoration: BoxDecoration(
                             color: Colors.white,
-                            borderRadius: BorderRadius.all(Radius.circular(20.0)),
+                            borderRadius:
+                                BorderRadius.all(Radius.circular(20.0)),
                           ),
                           child: Column(
                             children: [
                               Padding(
-                                padding:
-                                EdgeInsets.only(left: 10.0, top: 10, bottom: 5),
+                                padding: EdgeInsets.only(
+                                    left: 10.0, top: 10, bottom: 5),
                                 child: Align(
                                   alignment: Alignment.topLeft,
                                   child: Text(
@@ -364,13 +387,14 @@ class _Personal_DetailsState extends State<Personal_Details> {
                           width: size.width / 2.5,
                           decoration: BoxDecoration(
                             color: Colors.white,
-                            borderRadius: BorderRadius.all(Radius.circular(20.0)),
+                            borderRadius:
+                                BorderRadius.all(Radius.circular(20.0)),
                           ),
                           child: Column(
                             children: [
                               Padding(
-                                padding:
-                                EdgeInsets.only(left: 10.0, top: 10, bottom: 5),
+                                padding: EdgeInsets.only(
+                                    left: 10.0, top: 10, bottom: 5),
                                 child: Align(
                                   alignment: Alignment.topLeft,
                                   child: Text(

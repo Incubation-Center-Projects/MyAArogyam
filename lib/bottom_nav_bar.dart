@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:myaarogyam/Report_file.dart';
 import 'package:myaarogyam/accounts/screen/personal_information.dart';
 import 'package:myaarogyam/accounts/screen/profile.dart';
 import 'package:myaarogyam/doctor_details/doctor_details_page.dart';
+import 'package:myaarogyam/home/screen/doctor_screen.dart';
 import 'package:myaarogyam/home/screen/home_page.dart';
 import 'package:myaarogyam/home/screen/schedule.dart';
 
@@ -19,8 +21,8 @@ class _bottomnavbarState extends State<bottomnavbar> {
   final List<Widget> pages = [
     const Home_Screen(),
     const schedule(),
-    const doctor_page_detials(),
-    const Personal_Details(),
+    const Report(),
+    const DoctorScreen(),
     const Profile()
   ];
 

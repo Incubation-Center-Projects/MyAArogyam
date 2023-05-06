@@ -1,7 +1,12 @@
 import 'package:flutter/material.dart';
 
 class submit extends StatelessWidget {
-  submit({Key? key, required this.label, required this.width, required this.onCountSelected}) : super(key: key);
+  submit(
+      {Key? key,
+      required this.label,
+      required this.width,
+      required this.onCountSelected})
+      : super(key: key);
   final String label;
   final double width;
   final VoidCallback onCountSelected;
@@ -19,7 +24,9 @@ class submit extends StatelessWidget {
           splashColor: Colors.deepPurpleAccent,
           child: Padding(
               padding: EdgeInsets.symmetric(
-                  vertical: size.height/50, horizontal: width),
+                vertical: size.height / 50,
+                horizontal: width,
+              ),
               child: Text(
                 label,
                 style: TextStyle(
@@ -27,8 +34,9 @@ class submit extends StatelessWidget {
                     fontWeight: FontWeight.bold,
                     fontSize: 15),
               )),
-          onPressed: () {onCountSelected();}
-      ),
+          onPressed: () {
+            onCountSelected();
+          }),
     );
   }
 }

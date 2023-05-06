@@ -101,8 +101,9 @@ class _Home_ScreenState extends State<Home_Screen> {
                 height: MediaQuery.of(context).size.height * 0.02,
               ),
               PreferredSize(
-                preferredSize: Size.fromHeight(
-                  MediaQuery.of(context).size.height * 0.07,
+                preferredSize: Size(
+                  MediaQuery.of(context).size.width,
+                  MediaQuery.of(context).size.height * 0.1,
                 ),
                 child: Padding(
                   padding:
@@ -161,11 +162,13 @@ class _Home_ScreenState extends State<Home_Screen> {
                         ],
                       ),
                     ),
-                    Spacer(),
+                    SizedBox(
+                      width: MediaQuery.of(context).size.width * 0.02,
+                    ),
                     Image.asset(
                       "assets/maindoc.png",
-                      height: 150,
-                      width: 150,
+                      height: MediaQuery.of(context).size.height * 0.19,
+                      width: MediaQuery.of(context).size.width * 0.3,
                       fit: BoxFit.fitHeight,
                     )
                   ],

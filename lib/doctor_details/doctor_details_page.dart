@@ -20,6 +20,9 @@ class _doctor_page_detialsState extends State<doctor_page_detials> {
           scrollDirection: Axis.vertical,
           child: Stack(
             children: [
+              SizedBox(
+                height: MediaQuery.of(context).size.height * 0.02,
+              ),
               Column(children: [
                 Container(
                   height: size.height / 4,
@@ -31,7 +34,14 @@ class _doctor_page_detialsState extends State<doctor_page_detials> {
                         padding: EdgeInsets.all(15.0),
                         child: Row(
                           children: [
-                            SvgPicture.asset("assets/back.svg"),
+                            GestureDetector(
+                              onTap: () {
+                                Navigator.pop(context);
+                              },
+                              child: SvgPicture.asset(
+                                "assets/back.svg",
+                              ),
+                            ),
                             SizedBox(
                               width: 30,
                             ),
@@ -240,7 +250,7 @@ class _doctor_page_detialsState extends State<doctor_page_detials> {
                       child: Row(
                         children: [
                           SizedBox(
-                            width: 10,
+                            width: MediaQuery.of(context).size.width / 30,
                           ),
                           Container(
                               height: size.height / 14,
@@ -287,7 +297,7 @@ class _doctor_page_detialsState extends State<doctor_page_detials> {
                     ),
                   ),
                   SizedBox(
-                    height: 20,
+                    height: MediaQuery.of(context).size.height / 30,
                   ),
                   submit(
                     label: 'Book Now',
