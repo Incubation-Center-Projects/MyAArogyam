@@ -34,7 +34,8 @@ class _Home_ScreenState extends State<Home_Screen> {
                         Hero(
                           tag: "user",
                           child: GestureDetector(
-                            onTap: () => Navigator.pushNamed(context, "/profile"),
+                            onTap: () =>
+                                Navigator.pushNamed(context, "/profile"),
                             child: Container(
                               height: MediaQuery.of(context).size.height * 0.07,
                               width: MediaQuery.of(context).size.width * 0.13,
@@ -97,10 +98,12 @@ class _Home_ScreenState extends State<Home_Screen> {
                 ),
               ),
               SizedBox(
-                height: 10,
+                height: MediaQuery.of(context).size.height * 0.02,
               ),
               PreferredSize(
-                preferredSize: Size.fromHeight(50),
+                preferredSize: Size.fromHeight(
+                  MediaQuery.of(context).size.height * 0.07,
+                ),
                 child: Padding(
                   padding:
                       EdgeInsets.only(left: 15, right: 15, bottom: 10, top: 8),
@@ -113,16 +116,23 @@ class _Home_ScreenState extends State<Home_Screen> {
                         decoration: InputDecoration(
                           border: InputBorder.none,
                           prefixIcon: Icon(Icons.search),
+                          suffixIcon: Image.asset(
+                            'assets/Vector.png',
+                            height: MediaQuery.of(context).size.height * 0.02,
+                            width: MediaQuery.of(context).size.width * 0.02,
+                          ),
                           hintText: 'Search medical ....',
-                          contentPadding: EdgeInsets.symmetric(vertical: 15),
+                          contentPadding: EdgeInsets.symmetric(
+                            vertical: 15,
+                          ),
                         ),
                       ),
                     ),
                   ),
                 ),
               ),
-              const SizedBox(
-                height: 10,
+              SizedBox(
+                height: MediaQuery.of(context).size.height * 0.02,
               ),
               Container(
                 height: size.height / 5,
@@ -153,16 +163,16 @@ class _Home_ScreenState extends State<Home_Screen> {
                     ),
                     Spacer(),
                     Image.asset(
-                      "assets/demo_phonto.png",
+                      "assets/maindoc.png",
                       height: 150,
                       width: 150,
-                      fit: BoxFit.fill,
+                      fit: BoxFit.fitHeight,
                     )
                   ],
                 ),
               ),
               SizedBox(
-                height: 30,
+                height: MediaQuery.of(context).size.height * 0.02,
               ),
               Padding(
                 padding: EdgeInsets.only(
@@ -182,7 +192,7 @@ class _Home_ScreenState extends State<Home_Screen> {
                 ),
               ),
               SizedBox(
-                height: 30,
+                height: MediaQuery.of(context).size.height * 0.02,
               ),
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -190,15 +200,18 @@ class _Home_ScreenState extends State<Home_Screen> {
                   Column(
                     children: [
                       Container(
-                          height: size.height / 10,
-                          width: size.width / 5,
-                          decoration: BoxDecoration(
-                              color: Color.fromRGBO(220, 237, 249, 100),
-                              borderRadius:
-                                  BorderRadius.all(Radius.circular(25))),
-                          child: Center(
-                              child:
-                                  SvgPicture.asset("assets/telemedicine.svg"))),
+                        height: size.height / 10,
+                        width: size.width / 5,
+                        decoration: BoxDecoration(
+                            color: Color.fromRGBO(220, 237, 249, 100),
+                            borderRadius:
+                                BorderRadius.all(Radius.circular(25))),
+                        child: Center(
+                          child: SvgPicture.asset(
+                            "assets/telemedicine.svg",
+                          ),
+                        ),
+                      ),
                       SizedBox(
                         height: 5,
                       ),
@@ -313,12 +326,52 @@ class _Home_ScreenState extends State<Home_Screen> {
                       width: 20,
                     ),
                     Container(
-                        height: size.height / 7,
-                        width: size.width / 1.5,
-                        decoration: BoxDecoration(
-                            color: Color.fromRGBO(17, 111, 179, 100),
-                            borderRadius:
-                                BorderRadius.all(Radius.circular(25)))),
+                      height: size.height / 7,
+                      width: size.width / 1.5,
+                      decoration: const BoxDecoration(
+                        color: Color.fromRGBO(17, 111, 179, 100),
+                        borderRadius: BorderRadius.all(
+                          Radius.circular(25),
+                        ),
+                      ),
+                      child: Row(
+                        children: [
+                          Spacer(),
+                          Container(
+                            height: MediaQuery.of(context).size.height * 0.12,
+                            width: MediaQuery.of(context).size.width * 0.2,
+                            decoration: BoxDecoration(
+                              color: Colors.white,
+                              borderRadius: BorderRadius.all(
+                                Radius.circular(25),
+                              ),
+                            ),
+                            child: Column(
+                              children: [
+                                SizedBox(
+                                  height: 10,
+                                ),
+                                Text(
+                                  '10:00 AM',
+                                  style: TextStyle(
+                                      color: Colors.black,
+                                      fontWeight: FontWeight.bold),
+                                ),
+                                SizedBox(
+                                  height: 10,
+                                ),
+                                Text(
+                                  'Today',
+                                  style: TextStyle(
+                                      color: Colors.black,
+                                      fontWeight: FontWeight.bold),
+                                ),
+                              ],
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
                     SizedBox(
                       width: 20,
                     ),

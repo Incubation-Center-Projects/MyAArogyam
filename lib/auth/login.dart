@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:myaarogyam/auth/widget/button.dart';
 import 'package:myaarogyam/auth/widget/mytext_field.dart';
+import 'package:myaarogyam/bottom_nav_bar.dart';
 
 class signin extends StatefulWidget {
   const signin({Key? key}) : super(key: key);
@@ -64,9 +65,9 @@ class _signinState extends State<signin> {
                     ),
                     Center(
                         child: Image.asset(
-                          "assets/logo.png",
-                          height: size.height / 5,
-                        )),
+                      "assets/logo.png",
+                      height: size.height / 5,
+                    )),
                     Container(
                       height: size.height / 1.7,
                       width: size.width / 1.3,
@@ -81,21 +82,24 @@ class _signinState extends State<signin> {
                             SizedBox(
                               height: size.height / 90,
                             ),
-
                             Padding(
-                              padding: EdgeInsets.only(left: 20.0 , right: 20, bottom: 20),
+                              padding: EdgeInsets.only(
+                                  left: 20.0, right: 20, bottom: 20),
                               child: MyTextField(
                                 myController: phoneController,
                                 fieldName: 'Enter Mobile No.',
                                 myIcon: Icons.call_outlined,
                                 prefixIconColor:
-                                Color.fromRGBO(113, 40, 201, 80),
+                                    Color.fromRGBO(113, 40, 201, 80),
                                 keyboard: TextInputType.text,
                                 maxlines: 1,
                                 onSaved: (value) {},
                               ),
                             ),
-                            submit(label: "Send Me OTP",width: size.width/12, onCountSelected:(){}),
+                            submit(
+                                label: "Send Me OTP",
+                                width: size.width / 12,
+                                onCountSelected: () {}),
                             Row(
                               children: [
                                 Spacer(),
@@ -110,7 +114,7 @@ class _signinState extends State<signin> {
                                         }),
                                     data: ThemeData(
                                       unselectedWidgetColor:
-                                      Color.fromRGBO(113, 40, 201, 80),
+                                          Color.fromRGBO(113, 40, 201, 80),
                                     )),
                                 Text("Get important updates on whatsapp",
                                     style: TextStyle(
@@ -133,7 +137,7 @@ class _signinState extends State<signin> {
                                             Colors.deepPurple,
                                           ],
                                           begin:
-                                          const FractionalOffset(0.0, 0.0),
+                                              const FractionalOffset(0.0, 0.0),
                                           end: const FractionalOffset(1.0, 1.0),
                                           stops: [0.0, 1.0],
                                           tileMode: TileMode.clamp),
@@ -148,7 +152,8 @@ class _signinState extends State<signin> {
                                       "Or",
                                       style: TextStyle(
                                           fontWeight: FontWeight.bold,
-                                          color: Color.fromRGBO(113, 40, 201, 80),
+                                          color:
+                                              Color.fromRGBO(113, 40, 201, 80),
                                           decoration: TextDecoration.none,
                                           fontSize: 15.0),
                                     ),
@@ -161,7 +166,7 @@ class _signinState extends State<signin> {
                                             Color.fromRGBO(113, 40, 201, 80),
                                           ],
                                           begin:
-                                          const FractionalOffset(0.0, 0.0),
+                                              const FractionalOffset(0.0, 0.0),
                                           end: const FractionalOffset(1.0, 1.0),
                                           stops: [0.0, 1.0],
                                           tileMode: TileMode.clamp),
@@ -178,7 +183,15 @@ class _signinState extends State<signin> {
                             Padding(
                               padding: EdgeInsets.all(8.0),
                               child: TextButton(
-                                onPressed: () {},
+                                onPressed: () {
+                                  Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                      builder: (context) =>
+                                          const bottomnavbar(),
+                                    ),
+                                  );
+                                },
                                 style: TextButton.styleFrom(
                                   shape: RoundedRectangleBorder(
                                       borderRadius: BorderRadius.all(
@@ -191,7 +204,8 @@ class _signinState extends State<signin> {
                                   child: Text(
                                     'Continue with Guest',
                                     style: TextStyle(
-                                        color: Color.fromRGBO(113, 40, 201, 80), fontSize: 15),
+                                        color: Color.fromRGBO(113, 40, 201, 80),
+                                        fontSize: 15),
                                   ),
                                 ),
                               ),
@@ -202,12 +216,17 @@ class _signinState extends State<signin> {
                                   style: TextStyle(fontSize: 10)),
                             ),
                             InkWell(
-                              onTap: (){},
+                              onTap: () {},
                               child: Center(
-                                child: Image.asset("assets/whatsapp.png", height: size.height/10,),
+                                child: Image.asset(
+                                  "assets/whatsapp.png",
+                                  height: size.height / 10,
+                                ),
                               ),
                             ),
-                            SizedBox(height: 20,)
+                            SizedBox(
+                              height: 20,
+                            )
                           ],
                         ),
                       ),
