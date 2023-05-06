@@ -110,30 +110,56 @@ class DoctorScreen extends StatelessWidget {
                   ),
                   SingleChildScrollView(
                     scrollDirection: Axis.horizontal,
-                    child: Expanded(
-                      child: Row(
-                        children: [
-                          Padding(padding: EdgeInsets.only(left: 20)),
-                          LiveDoc(),
-                          LiveDoc(),
-                          LiveDoc(),
-                          LiveDoc(),
-                          LiveDoc(),
-                        ],
-                      ),
+                    child: Row(
+                      children: [
+                        Padding(padding: EdgeInsets.only(left: 20)),
+                        LiveDoc(),
+                        LiveDoc(),
+                        LiveDoc(),
+                        LiveDoc(),
+                        LiveDoc(),
+                      ],
                     ),
                   ),
                 ],
               ),
               SizedBox(
-                height: 30,
+                height: MediaQuery.of(context).size.height * 0.02,
+              ),
+              Row(
+                children: [
+                  Padding(padding: EdgeInsets.only(left: 20)),
+                  Text(
+                    'Popular Doctors',
+                    textAlign: TextAlign.start,
+                    style: TextStyle(
+                      fontSize: 17,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                  SizedBox(
+                    width: MediaQuery.of(context).size.width * 0.4,
+                  ),
+                  Text(
+                    'See All',
+                    textAlign: TextAlign.start,
+                    style: TextStyle(
+                      fontSize: 12,
+                      fontWeight: FontWeight.bold,
+                      color: Color(0xFF8AA0BC),
+                    ),
+                  ),
+                ],
+              ),
+              SizedBox(
+                height: MediaQuery.of(context).size.height * 0.02,
               ),
               ListTile(
                 visualDensity: VisualDensity(
                   vertical: 4,
                 ),
                 leading: Container(
-                  height: 200,
+                  height: 250,
                   width: 100,
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(10),
