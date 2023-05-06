@@ -13,11 +13,11 @@ class _Home_ScreenState extends State<Home_Screen> {
   @override
   Widget build(BuildContext context) {
     final size = MediaQuery.of(context).size;
-    return Scaffold(
-      backgroundColor: Colors.white,
-      body: SingleChildScrollView(
-        scrollDirection: Axis.vertical,
-        child: SafeArea(
+    return SafeArea(
+      child: Scaffold(
+        backgroundColor: Colors.white,
+        body: SingleChildScrollView(
+          scrollDirection: Axis.vertical,
           child: Column(
             children: [
               SizedBox(
@@ -329,7 +329,7 @@ class _Home_ScreenState extends State<Home_Screen> {
                       height: size.height / 7,
                       width: size.width / 1.5,
                       decoration: const BoxDecoration(
-                        color: Color.fromRGBO(17, 111, 179, 100),
+                        color: Color(0xFF1C6BA4),
                         borderRadius: BorderRadius.all(
                           Radius.circular(25),
                         ),
@@ -341,7 +341,7 @@ class _Home_ScreenState extends State<Home_Screen> {
                             height: MediaQuery.of(context).size.height * 0.12,
                             width: MediaQuery.of(context).size.width * 0.2,
                             decoration: BoxDecoration(
-                              color: Colors.white,
+                              color: Color.fromRGBO(242, 227, 233, 100),
                               borderRadius: BorderRadius.all(
                                 Radius.circular(25),
                               ),
@@ -349,26 +349,83 @@ class _Home_ScreenState extends State<Home_Screen> {
                             child: Column(
                               children: [
                                 SizedBox(
-                                  height: 10,
+                                  height: MediaQuery.of(context).size.height *
+                                      0.015,
                                 ),
                                 Text(
-                                  '10:00 AM',
+                                  '12',
                                   style: TextStyle(
-                                      color: Colors.black,
-                                      fontWeight: FontWeight.bold),
+                                      color: Colors.white,
+                                      fontWeight: FontWeight.bold,
+                                      fontSize: 25),
                                 ),
                                 SizedBox(
-                                  height: 10,
+                                  height:
+                                      MediaQuery.of(context).size.height * 0.01,
                                 ),
                                 Text(
-                                  'Today',
+                                  'Tue',
                                   style: TextStyle(
-                                      color: Colors.black,
-                                      fontWeight: FontWeight.bold),
+                                    color: Colors.white,
+                                    fontSize: 15,
+                                  ),
                                 ),
                               ],
                             ),
                           ),
+                          SizedBox(
+                            width: MediaQuery.of(context).size.width * 0.02,
+                          ),
+                          Column(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Text(
+                                '09:30 AM',
+                                style: TextStyle(
+                                  color: Colors.white,
+                                  fontSize: 10,
+                                ),
+                              ),
+                              SizedBox(
+                                height:
+                                    MediaQuery.of(context).size.height * 0.01,
+                              ),
+                              Text(
+                                'Dr. Mim Akhter',
+                                style: TextStyle(
+                                  color: Colors.white,
+                                  fontSize: 15,
+                                  fontWeight: FontWeight.bold,
+                                ),
+                              ),
+                              SizedBox(
+                                height:
+                                    MediaQuery.of(context).size.height * 0.01,
+                              ),
+                              Text(
+                                'Depression',
+                                style: TextStyle(
+                                  color: Colors.white,
+                                  fontSize: 12,
+                                ),
+                              ),
+                            ],
+                          ),
+                          Spacer(),
+                          Column(
+                            children: [
+                              SizedBox(
+                                height:
+                                    MediaQuery.of(context).size.height * 0.01,
+                              ),
+                              Icon(
+                                Icons.more_horiz,
+                                color: Colors.white,
+                              ),
+                            ],
+                          ),
+                          Spacer(),
                         ],
                       ),
                     ),
@@ -376,32 +433,109 @@ class _Home_ScreenState extends State<Home_Screen> {
                       width: 20,
                     ),
                     Container(
-                        height: size.height / 7,
-                        width: size.width / 1.5,
-                        decoration: BoxDecoration(
-                            color: Color.fromRGBO(17, 111, 179, 100),
-                            borderRadius:
-                                BorderRadius.all(Radius.circular(25)))),
-                    SizedBox(
-                      width: 20,
+                      height: size.height / 7,
+                      width: size.width / 1.5,
+                      decoration: const BoxDecoration(
+                        color: Color(0x7BE0A01F),
+                        borderRadius: BorderRadius.all(
+                          Radius.circular(25),
+                        ),
+                      ),
+                      child: Row(
+                        children: [
+                          Spacer(),
+                          Container(
+                            height: MediaQuery.of(context).size.height * 0.12,
+                            width: MediaQuery.of(context).size.width * 0.2,
+                            decoration: BoxDecoration(
+                              color: Color(0xFFE0A01F),
+                              borderRadius: BorderRadius.all(
+                                Radius.circular(25),
+                              ),
+                            ),
+                            child: Column(
+                              children: [
+                                SizedBox(
+                                  height: MediaQuery.of(context).size.height *
+                                      0.015,
+                                ),
+                                Text(
+                                  '12',
+                                  style: TextStyle(
+                                      color: Colors.white,
+                                      fontWeight: FontWeight.bold,
+                                      fontSize: 25),
+                                ),
+                                SizedBox(
+                                  height:
+                                      MediaQuery.of(context).size.height * 0.01,
+                                ),
+                                Text(
+                                  'Tue',
+                                  style: TextStyle(
+                                    color: Colors.white,
+                                    fontSize: 15,
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ),
+                          SizedBox(
+                            width: MediaQuery.of(context).size.width * 0.02,
+                          ),
+                          Column(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Text(
+                                '09:30 AM',
+                                style: TextStyle(
+                                  color: Colors.white,
+                                  fontSize: 10,
+                                ),
+                              ),
+                              SizedBox(
+                                height:
+                                    MediaQuery.of(context).size.height * 0.01,
+                              ),
+                              Text(
+                                'Dr. Mim Akhter',
+                                style: TextStyle(
+                                  color: Colors.white,
+                                  fontSize: 15,
+                                  fontWeight: FontWeight.bold,
+                                ),
+                              ),
+                              SizedBox(
+                                height:
+                                    MediaQuery.of(context).size.height * 0.01,
+                              ),
+                              Text(
+                                'Depression',
+                                style: TextStyle(
+                                  color: Colors.white,
+                                  fontSize: 12,
+                                ),
+                              ),
+                            ],
+                          ),
+                          Spacer(),
+                          Column(
+                            children: [
+                              SizedBox(
+                                height:
+                                    MediaQuery.of(context).size.height * 0.01,
+                              ),
+                              Icon(
+                                Icons.more_horiz,
+                                color: Colors.white,
+                              ),
+                            ],
+                          ),
+                          Spacer(),
+                        ],
+                      ),
                     ),
-                    Container(
-                        height: size.height / 7,
-                        width: size.width / 1.5,
-                        decoration: BoxDecoration(
-                            color: Color.fromRGBO(17, 111, 179, 100),
-                            borderRadius:
-                                BorderRadius.all(Radius.circular(25)))),
-                    SizedBox(
-                      width: 20,
-                    ),
-                    Container(
-                        height: size.height / 7,
-                        width: size.width / 1.5,
-                        decoration: BoxDecoration(
-                            color: Color.fromRGBO(17, 111, 179, 100),
-                            borderRadius:
-                                BorderRadius.all(Radius.circular(25)))),
                   ],
                 ),
               )
