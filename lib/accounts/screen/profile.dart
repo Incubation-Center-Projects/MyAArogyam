@@ -14,7 +14,7 @@ class _ProfileState extends State<Profile> {
     final size = MediaQuery.of(context).size;
     //final user = Provider.of<UserProvider>(context).user;
     return Scaffold(
-      backgroundColor: Color.fromRGBO(28, 107, 164, 20),
+      backgroundColor: const Color.fromRGBO(28, 107, 164, 20),
       body: SafeArea(
         child: SingleChildScrollView(
           scrollDirection: Axis.vertical,
@@ -24,13 +24,13 @@ class _ProfileState extends State<Profile> {
                 height: MediaQuery.of(context).size.height * 0.02,
               ),
               Padding(
-                padding: EdgeInsets.all(12.0),
+                padding: const EdgeInsets.all(12.0),
                 child: Row(
                   children: [
                     GestureDetector(
                         onTap: () => Navigator.pop(context),
                         child: SvgPicture.asset("assets/back.svg")),
-                    SizedBox(
+                    const SizedBox(
                       width: 30,
                     ),
                   ],
@@ -48,7 +48,7 @@ class _ProfileState extends State<Profile> {
                     decoration: BoxDecoration(
                       border: Border.all(color: Colors.white, width: 0.1),
                       borderRadius: BorderRadius.circular(30),
-                      image: DecorationImage(
+                      image: const DecorationImage(
                         image: AssetImage(
                           "assets/profile.png",
                         ),
@@ -61,8 +61,8 @@ class _ProfileState extends State<Profile> {
               SizedBox(
                 height: MediaQuery.of(context).size.height * 0.02,
               ),
-              Padding(
-                padding: const EdgeInsets.all(8.0),
+              const Padding(
+                padding: EdgeInsets.all(8.0),
                 child: Text(
                   "Shahin Alam",
                   style: TextStyle(
@@ -71,8 +71,8 @@ class _ProfileState extends State<Profile> {
                       fontSize: 25),
                 ),
               ),
-              Padding(
-                padding: const EdgeInsets.all(8.0),
+              const Padding(
+                padding: EdgeInsets.all(8.0),
                 child: Text(
                   "Ui Designer",
                   style: TextStyle(
@@ -87,7 +87,7 @@ class _ProfileState extends State<Profile> {
               Padding(
                 padding: const EdgeInsets.all(20.0),
                 child: MaterialButton(
-                    shape: RoundedRectangleBorder(
+                    shape: const RoundedRectangleBorder(
                         borderRadius: BorderRadius.all(Radius.circular(7.0))),
                     color: Colors.white,
                     highlightColor: Colors.white,
@@ -96,7 +96,7 @@ class _ProfileState extends State<Profile> {
                         padding:
                             EdgeInsets.symmetric(vertical: size.height / 40),
                         child: Row(
-                          children: [
+                          children: const [
                             Icon(
                               Icons.person,
                               color: Colors.blueAccent,
@@ -120,7 +120,7 @@ class _ProfileState extends State<Profile> {
               Padding(
                 padding: const EdgeInsets.all(20.0),
                 child: MaterialButton(
-                    shape: RoundedRectangleBorder(
+                    shape: const RoundedRectangleBorder(
                         borderRadius: BorderRadius.all(Radius.circular(7.0))),
                     color: Colors.white,
                     highlightColor: Colors.white,
@@ -129,7 +129,7 @@ class _ProfileState extends State<Profile> {
                         padding:
                             EdgeInsets.symmetric(vertical: size.height / 40),
                         child: Row(
-                          children: [
+                          children: const [
                             Icon(
                               Icons.privacy_tip_outlined,
                               color: Colors.blueAccent,
@@ -151,7 +151,7 @@ class _ProfileState extends State<Profile> {
               Padding(
                 padding: const EdgeInsets.all(20.0),
                 child: MaterialButton(
-                    shape: RoundedRectangleBorder(
+                    shape: const RoundedRectangleBorder(
                         borderRadius: BorderRadius.all(Radius.circular(7.0))),
                     color: Colors.white,
                     highlightColor: Colors.white,
@@ -160,7 +160,7 @@ class _ProfileState extends State<Profile> {
                         padding:
                             EdgeInsets.symmetric(vertical: size.height / 40),
                         child: Row(
-                          children: [
+                          children: const [
                             Icon(
                               Icons.credit_card_rounded,
                               color: Colors.blueAccent,
@@ -182,7 +182,7 @@ class _ProfileState extends State<Profile> {
               Padding(
                 padding: const EdgeInsets.all(20.0),
                 child: MaterialButton(
-                    shape: RoundedRectangleBorder(
+                    shape: const RoundedRectangleBorder(
                         borderRadius: BorderRadius.all(Radius.circular(7.0))),
                     color: Colors.white,
                     highlightColor: Colors.white,
@@ -191,7 +191,7 @@ class _ProfileState extends State<Profile> {
                         padding:
                             EdgeInsets.symmetric(vertical: size.height / 40),
                         child: Row(
-                          children: [
+                          children: const [
                             Icon(
                               Icons.settings,
                               color: Colors.blueAccent,
@@ -213,7 +213,7 @@ class _ProfileState extends State<Profile> {
               Padding(
                 padding: const EdgeInsets.all(8.0),
                 child: MaterialButton(
-                    shape: RoundedRectangleBorder(
+                    shape: const RoundedRectangleBorder(
                       borderRadius: BorderRadius.all(
                         Radius.circular(7.0),
                       ),
@@ -224,7 +224,7 @@ class _ProfileState extends State<Profile> {
                         padding:
                             EdgeInsets.symmetric(vertical: size.height / 40),
                         child: Row(
-                          children: [
+                          children: const [
                             Icon(
                               Icons.logout,
                               color: Color(0xffBECADA),

@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
-class Personal_Details extends StatefulWidget {
-  const Personal_Details({Key? key}) : super(key: key);
+class PersonalDetails extends StatefulWidget {
+  const PersonalDetails({Key? key}) : super(key: key);
 
   @override
-  State<Personal_Details> createState() => _Personal_DetailsState();
+  State<PersonalDetails> createState() => _PersonalDetailsState();
 }
 
-class _Personal_DetailsState extends State<Personal_Details> {
+class _PersonalDetailsState extends State<PersonalDetails> {
   @override
   Widget build(BuildContext context) {
     final size = MediaQuery.of(context).size;
@@ -27,7 +27,7 @@ class _Personal_DetailsState extends State<Personal_Details> {
                 child: Column(
                   children: [
                     Padding(
-                      padding: EdgeInsets.all(12.0),
+                      padding: const EdgeInsets.all(12.0),
                       child: Row(
                         children: [
                           GestureDetector(
@@ -35,10 +35,10 @@ class _Personal_DetailsState extends State<Personal_Details> {
                                 Navigator.pop(context);
                               },
                               child: SvgPicture.asset("assets/back.svg")),
-                          SizedBox(
+                          const SizedBox(
                             width: 30,
                           ),
-                          Text(
+                          const Text(
                             'Personal Details',
                             style: TextStyle(
                               color: Colors.white,
@@ -49,7 +49,7 @@ class _Personal_DetailsState extends State<Personal_Details> {
                         ],
                       ),
                     ),
-                    Center(
+                    const Center(
                       child: CircleAvatar(
                         foregroundColor: Colors.white,
                         radius: 50,
@@ -64,10 +64,10 @@ class _Personal_DetailsState extends State<Personal_Details> {
                 padding: const EdgeInsets.all(30.0),
                 child: Column(
                   children: [
-                    SizedBox(
+                    const SizedBox(
                       height: 20,
                     ),
-                    Padding(
+                    const Padding(
                       padding: EdgeInsets.only(left: 8.0, top: 7, bottom: 20),
                       child: Align(
                         alignment: Alignment.topLeft,
@@ -83,12 +83,12 @@ class _Personal_DetailsState extends State<Personal_Details> {
                     Container(
                       height: size.height / 12,
                       width: size.width / 1.1,
-                      decoration: BoxDecoration(
+                      decoration: const BoxDecoration(
                         color: Colors.white,
                         borderRadius: BorderRadius.all(Radius.circular(20.0)),
                       ),
                       child: Column(
-                        children: [
+                        children: const [
                           Padding(
                             padding:
                                 EdgeInsets.only(left: 10.0, top: 10, bottom: 5),
@@ -127,13 +127,13 @@ class _Personal_DetailsState extends State<Personal_Details> {
                         Container(
                           height: size.height / 12,
                           width: size.width / 2.5,
-                          decoration: BoxDecoration(
+                          decoration: const BoxDecoration(
                             color: Colors.white,
                             borderRadius:
                                 BorderRadius.all(Radius.circular(20.0)),
                           ),
                           child: Column(
-                            children: [
+                            children: const [
                               Padding(
                                 padding: EdgeInsets.only(
                                     left: 10.0, top: 10, bottom: 5),
@@ -163,17 +163,17 @@ class _Personal_DetailsState extends State<Personal_Details> {
                             ],
                           ),
                         ),
-                        Spacer(),
+                        const Spacer(),
                         Container(
                           height: size.height / 12,
                           width: size.width / 2.5,
-                          decoration: BoxDecoration(
+                          decoration: const BoxDecoration(
                             color: Colors.white,
                             borderRadius:
                                 BorderRadius.all(Radius.circular(20.0)),
                           ),
                           child: Column(
-                            children: [
+                            children: const [
                               Padding(
                                 padding: EdgeInsets.only(
                                     left: 10.0, top: 10, bottom: 5),
@@ -214,13 +214,13 @@ class _Personal_DetailsState extends State<Personal_Details> {
                         Container(
                           height: size.height / 12,
                           width: size.width / 2.5,
-                          decoration: BoxDecoration(
+                          decoration: const BoxDecoration(
                             color: Colors.white,
                             borderRadius:
                                 BorderRadius.all(Radius.circular(20.0)),
                           ),
                           child: Column(
-                            children: [
+                            children: const [
                               Padding(
                                 padding: EdgeInsets.only(
                                     left: 10.0, top: 10, bottom: 5),
@@ -251,17 +251,17 @@ class _Personal_DetailsState extends State<Personal_Details> {
                             ],
                           ),
                         ),
-                        Spacer(),
+                        const Spacer(),
                         Container(
                           height: size.height / 12,
                           width: size.width / 2.5,
-                          decoration: BoxDecoration(
+                          decoration: const BoxDecoration(
                             color: Colors.white,
                             borderRadius:
                                 BorderRadius.all(Radius.circular(20.0)),
                           ),
                           child: Column(
-                            children: [
+                            children: const [
                               Padding(
                                 padding: EdgeInsets.only(
                                     left: 10.0, top: 10, bottom: 5),
@@ -300,12 +300,12 @@ class _Personal_DetailsState extends State<Personal_Details> {
                     Container(
                       height: size.height / 12,
                       width: size.width / 1.1,
-                      decoration: BoxDecoration(
+                      decoration: const BoxDecoration(
                         color: Colors.white,
                         borderRadius: BorderRadius.all(Radius.circular(20.0)),
                       ),
                       child: Column(
-                        children: [
+                        children: const [
                           Padding(
                             padding:
                                 EdgeInsets.only(left: 10.0, top: 10, bottom: 5),
@@ -344,13 +344,13 @@ class _Personal_DetailsState extends State<Personal_Details> {
                         Container(
                           height: size.height / 12,
                           width: size.width / 2.5,
-                          decoration: BoxDecoration(
+                          decoration: const BoxDecoration(
                             color: Colors.white,
                             borderRadius:
                                 BorderRadius.all(Radius.circular(20.0)),
                           ),
                           child: Column(
-                            children: [
+                            children: const [
                               Padding(
                                 padding: EdgeInsets.only(
                                     left: 10.0, top: 10, bottom: 5),
@@ -381,17 +381,17 @@ class _Personal_DetailsState extends State<Personal_Details> {
                             ],
                           ),
                         ),
-                        Spacer(),
+                        const Spacer(),
                         Container(
                           height: size.height / 12,
                           width: size.width / 2.5,
-                          decoration: BoxDecoration(
+                          decoration: const BoxDecoration(
                             color: Colors.white,
                             borderRadius:
                                 BorderRadius.all(Radius.circular(20.0)),
                           ),
                           child: Column(
-                            children: [
+                            children: const [
                               Padding(
                                 padding: EdgeInsets.only(
                                     left: 10.0, top: 10, bottom: 5),
@@ -423,7 +423,7 @@ class _Personal_DetailsState extends State<Personal_Details> {
                         ),
                       ],
                     ),
-                    SizedBox(
+                    const SizedBox(
                       height: 20,
                     ),
                   ],

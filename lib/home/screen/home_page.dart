@@ -2,14 +2,14 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:myaarogyam/Report_file.dart';
 
-class Home_Screen extends StatefulWidget {
-  const Home_Screen({Key? key}) : super(key: key);
+class HomeScreen extends StatefulWidget {
+  const HomeScreen({Key? key}) : super(key: key);
 
   @override
-  State<Home_Screen> createState() => _Home_ScreenState();
+  State<HomeScreen> createState() => _HomeScreenState();
 }
 
-class _Home_ScreenState extends State<Home_Screen> {
+class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
     final size = MediaQuery.of(context).size;
@@ -42,7 +42,7 @@ class _Home_ScreenState extends State<Home_Screen> {
                               decoration: BoxDecoration(
                                 borderRadius: BorderRadius.circular(10),
                                 color: Colors.transparent,
-                                image: DecorationImage(
+                                image: const DecorationImage(
                                   image: AssetImage('assets/demo_phonto.png'),
                                   fit: BoxFit.fill,
                                 ),
@@ -68,12 +68,12 @@ class _Home_ScreenState extends State<Home_Screen> {
                       width: MediaQuery.of(context).size.width * 0.03,
                     ),
                     Padding(
-                      padding: EdgeInsets.only(top: 1),
+                      padding: const EdgeInsets.only(top: 1),
                       child: Column(
                         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
-                          Text(
+                          const Text(
                             '👋 Hello!',
                             style: TextStyle(
                               color: Colors.black,
@@ -83,7 +83,7 @@ class _Home_ScreenState extends State<Home_Screen> {
                           SizedBox(
                             height: MediaQuery.of(context).size.height * 0.01,
                           ),
-                          Text(
+                          const Text(
                             'Shahin Alam',
                             style: TextStyle(
                               color: Colors.black,
@@ -107,23 +107,23 @@ class _Home_ScreenState extends State<Home_Screen> {
                 ),
                 child: Padding(
                   padding:
-                      EdgeInsets.only(left: 15, right: 15, bottom: 10, top: 8),
+                      const EdgeInsets.only(left: 15, right: 15, bottom: 10, top: 8),
                   child: Container(
-                    decoration: BoxDecoration(
+                    decoration: const BoxDecoration(
                         borderRadius: BorderRadius.all(Radius.circular(20)),
                         color: Color.fromRGBO(246, 216, 216, 100)),
                     child: Center(
                       child: TextField(
                         decoration: InputDecoration(
                           border: InputBorder.none,
-                          prefixIcon: Icon(Icons.search),
+                          prefixIcon: const Icon(Icons.search),
                           suffixIcon: Image.asset(
                             'assets/Vector.png',
                             height: MediaQuery.of(context).size.height * 0.02,
                             width: MediaQuery.of(context).size.width * 0.02,
                           ),
                           hintText: 'Search medical ....',
-                          contentPadding: EdgeInsets.symmetric(
+                          contentPadding: const EdgeInsets.symmetric(
                             vertical: 15,
                           ),
                         ),
@@ -138,7 +138,7 @@ class _Home_ScreenState extends State<Home_Screen> {
               Container(
                 height: size.height / 5,
                 width: size.width / 1.1,
-                decoration: BoxDecoration(
+                decoration: const BoxDecoration(
                     color: Color.fromRGBO(246, 243, 216, 100),
                     borderRadius: BorderRadius.all(Radius.circular(25))),
                 child: Row(
@@ -147,7 +147,7 @@ class _Home_ScreenState extends State<Home_Screen> {
                       padding: const EdgeInsets.all(12.0),
                       child: Column(
                         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                        children: [
+                        children: const [
                           Text(
                             'Get the Best \nMedical Service',
                             style: TextStyle(
@@ -178,11 +178,11 @@ class _Home_ScreenState extends State<Home_Screen> {
                 height: MediaQuery.of(context).size.height * 0.02,
               ),
               Padding(
-                padding: EdgeInsets.only(
+                padding: const EdgeInsets.only(
                   left: 20.0,
                 ),
                 child: Row(
-                  children: [
+                  children: const [
                     Expanded(
                         child: Text(
                       'Services',
@@ -205,7 +205,7 @@ class _Home_ScreenState extends State<Home_Screen> {
                       Container(
                         height: size.height / 10,
                         width: size.width / 5,
-                        decoration: BoxDecoration(
+                        decoration: const BoxDecoration(
                             color: Color.fromRGBO(220, 237, 249, 100),
                             borderRadius:
                                 BorderRadius.all(Radius.circular(25))),
@@ -215,10 +215,10 @@ class _Home_ScreenState extends State<Home_Screen> {
                           ),
                         ),
                       ),
-                      SizedBox(
+                      const SizedBox(
                         height: 5,
                       ),
-                      Text(
+                      const Text(
                         'TeleMedicine',
                         style: TextStyle(color: Colors.black, fontSize: 10),
                       ),
@@ -229,17 +229,17 @@ class _Home_ScreenState extends State<Home_Screen> {
                       Container(
                         height: size.height / 10,
                         width: size.width / 5,
-                        decoration: BoxDecoration(
+                        decoration: const BoxDecoration(
                             color: Color.fromRGBO(250, 240, 219, 100),
                             borderRadius:
                                 BorderRadius.all(Radius.circular(25))),
                         child:
                             Center(child: SvgPicture.asset("assets/pills.svg")),
                       ),
-                      SizedBox(
+                      const SizedBox(
                         height: 5,
                       ),
-                      Text(
+                      const Text(
                         'Medicine',
                         style: TextStyle(color: Colors.black, fontSize: 10),
                       ),
@@ -251,13 +251,13 @@ class _Home_ScreenState extends State<Home_Screen> {
                         onTap: () => Navigator.push(
                           context,
                           MaterialPageRoute(
-                            builder: (context) => Report(),
+                            builder: (context) => const Report(),
                           ),
                         ),
                         child: Container(
                           height: size.height / 10,
                           width: size.width / 5,
-                          decoration: BoxDecoration(
+                          decoration: const BoxDecoration(
                               color: Color.fromRGBO(214, 246, 255, 100),
                               borderRadius:
                                   BorderRadius.all(Radius.circular(25))),
@@ -265,10 +265,10 @@ class _Home_ScreenState extends State<Home_Screen> {
                               child: SvgPicture.asset("assets/report.svg")),
                         ),
                       ),
-                      SizedBox(
+                      const SizedBox(
                         height: 5,
                       ),
-                      Text(
+                      const Text(
                         'Report',
                         style: TextStyle(color: Colors.black, fontSize: 10),
                       ),
@@ -279,17 +279,17 @@ class _Home_ScreenState extends State<Home_Screen> {
                       Container(
                         height: size.height / 10,
                         width: size.width / 5,
-                        decoration: BoxDecoration(
+                        decoration: const BoxDecoration(
                             color: Color.fromRGBO(242, 227, 233, 100),
                             borderRadius:
                                 BorderRadius.all(Radius.circular(25))),
                         child: Center(
                             child: SvgPicture.asset("assets/corona.svg")),
                       ),
-                      SizedBox(
+                      const SizedBox(
                         height: 5,
                       ),
-                      Text(
+                      const Text(
                         'Corona',
                         style: TextStyle(color: Colors.black, fontSize: 10),
                       ),
@@ -297,15 +297,15 @@ class _Home_ScreenState extends State<Home_Screen> {
                   ),
                 ],
               ),
-              SizedBox(
+              const SizedBox(
                 height: 30,
               ),
               Padding(
-                padding: EdgeInsets.only(
+                padding: const EdgeInsets.only(
                   left: 20.0,
                 ),
                 child: Row(
-                  children: [
+                  children: const [
                     Expanded(
                         child: Text(
                       'Appointments',
@@ -317,7 +317,7 @@ class _Home_ScreenState extends State<Home_Screen> {
                   ],
                 ),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 20,
               ),
               SingleChildScrollView(
@@ -325,7 +325,7 @@ class _Home_ScreenState extends State<Home_Screen> {
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: [
-                    SizedBox(
+                    const SizedBox(
                       width: 20,
                     ),
                     Container(
@@ -339,11 +339,11 @@ class _Home_ScreenState extends State<Home_Screen> {
                       ),
                       child: Row(
                         children: [
-                          Spacer(),
+                          const Spacer(),
                           Container(
                             height: MediaQuery.of(context).size.height * 0.12,
                             width: MediaQuery.of(context).size.width * 0.2,
-                            decoration: BoxDecoration(
+                            decoration: const BoxDecoration(
                               color: Color.fromRGBO(242, 227, 233, 100),
                               borderRadius: BorderRadius.all(
                                 Radius.circular(25),
@@ -355,7 +355,7 @@ class _Home_ScreenState extends State<Home_Screen> {
                                   height: MediaQuery.of(context).size.height *
                                       0.015,
                                 ),
-                                Text(
+                                const Text(
                                   '12',
                                   style: TextStyle(
                                       color: Colors.white,
@@ -366,7 +366,7 @@ class _Home_ScreenState extends State<Home_Screen> {
                                   height:
                                       MediaQuery.of(context).size.height * 0.01,
                                 ),
-                                Text(
+                                const Text(
                                   'Tue',
                                   style: TextStyle(
                                     color: Colors.white,
@@ -383,7 +383,7 @@ class _Home_ScreenState extends State<Home_Screen> {
                             mainAxisAlignment: MainAxisAlignment.center,
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
-                              Text(
+                              const Text(
                                 '09:30 AM',
                                 style: TextStyle(
                                   color: Colors.white,
@@ -394,7 +394,7 @@ class _Home_ScreenState extends State<Home_Screen> {
                                 height:
                                     MediaQuery.of(context).size.height * 0.01,
                               ),
-                              Text(
+                              const Text(
                                 'Dr. Mim Akhter',
                                 style: TextStyle(
                                   color: Colors.white,
@@ -406,7 +406,7 @@ class _Home_ScreenState extends State<Home_Screen> {
                                 height:
                                     MediaQuery.of(context).size.height * 0.01,
                               ),
-                              Text(
+                              const Text(
                                 'Depression',
                                 style: TextStyle(
                                   color: Colors.white,
@@ -415,24 +415,24 @@ class _Home_ScreenState extends State<Home_Screen> {
                               ),
                             ],
                           ),
-                          Spacer(),
+                          const Spacer(),
                           Column(
                             children: [
                               SizedBox(
                                 height:
                                     MediaQuery.of(context).size.height * 0.01,
                               ),
-                              Icon(
+                              const Icon(
                                 Icons.more_horiz,
                                 color: Colors.white,
                               ),
                             ],
                           ),
-                          Spacer(),
+                          const Spacer(),
                         ],
                       ),
                     ),
-                    SizedBox(
+                    const SizedBox(
                       width: 20,
                     ),
                     Container(
@@ -446,11 +446,11 @@ class _Home_ScreenState extends State<Home_Screen> {
                       ),
                       child: Row(
                         children: [
-                          Spacer(),
+                          const Spacer(),
                           Container(
                             height: MediaQuery.of(context).size.height * 0.12,
                             width: MediaQuery.of(context).size.width * 0.2,
-                            decoration: BoxDecoration(
+                            decoration: const BoxDecoration(
                               color: Color(0xFFE0A01F),
                               borderRadius: BorderRadius.all(
                                 Radius.circular(25),
@@ -462,7 +462,7 @@ class _Home_ScreenState extends State<Home_Screen> {
                                   height: MediaQuery.of(context).size.height *
                                       0.015,
                                 ),
-                                Text(
+                                const Text(
                                   '12',
                                   style: TextStyle(
                                       color: Colors.white,
@@ -473,7 +473,7 @@ class _Home_ScreenState extends State<Home_Screen> {
                                   height:
                                       MediaQuery.of(context).size.height * 0.01,
                                 ),
-                                Text(
+                                const Text(
                                   'Tue',
                                   style: TextStyle(
                                     color: Colors.white,
@@ -490,7 +490,7 @@ class _Home_ScreenState extends State<Home_Screen> {
                             mainAxisAlignment: MainAxisAlignment.center,
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
-                              Text(
+                              const Text(
                                 '09:30 AM',
                                 style: TextStyle(
                                   color: Colors.white,
@@ -501,7 +501,7 @@ class _Home_ScreenState extends State<Home_Screen> {
                                 height:
                                     MediaQuery.of(context).size.height * 0.01,
                               ),
-                              Text(
+                              const Text(
                                 'Dr. Mim Akhter',
                                 style: TextStyle(
                                   color: Colors.white,
@@ -513,7 +513,7 @@ class _Home_ScreenState extends State<Home_Screen> {
                                 height:
                                     MediaQuery.of(context).size.height * 0.01,
                               ),
-                              Text(
+                              const Text(
                                 'Depression',
                                 style: TextStyle(
                                   color: Colors.white,
@@ -522,20 +522,20 @@ class _Home_ScreenState extends State<Home_Screen> {
                               ),
                             ],
                           ),
-                          Spacer(),
+                          const Spacer(),
                           Column(
                             children: [
                               SizedBox(
                                 height:
                                     MediaQuery.of(context).size.height * 0.01,
                               ),
-                              Icon(
+                              const Icon(
                                 Icons.more_horiz,
                                 color: Colors.white,
                               ),
                             ],
                           ),
-                          Spacer(),
+                          const Spacer(),
                         ],
                       ),
                     ),

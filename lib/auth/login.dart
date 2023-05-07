@@ -3,14 +3,14 @@ import 'package:myaarogyam/auth/widget/button.dart';
 import 'package:myaarogyam/auth/widget/mytext_field.dart';
 import 'package:myaarogyam/bottom_nav_bar.dart';
 
-class signin extends StatefulWidget {
-  const signin({Key? key}) : super(key: key);
+class SignIn extends StatefulWidget {
+  const SignIn({Key? key}) : super(key: key);
 
   @override
-  State<signin> createState() => _signinState();
+  State<SignIn> createState() => _SignInState();
 }
 
-class _signinState extends State<signin> {
+class _SignInState extends State<SignIn> {
   // @override
   // Widget build(BuildContext context) {
   //
@@ -48,10 +48,10 @@ class _signinState extends State<signin> {
           scrollDirection: Axis.vertical,
           child: Container(
             height: size.height,
-            color: Color.fromRGBO(221, 213, 224, 100),
+            color: const Color.fromRGBO(221, 213, 224, 100),
             child: Stack(
               children: [
-                Container(
+                SizedBox(
                     height: size.height / 3,
                     width: size.width,
                     child: Image.asset(
@@ -71,7 +71,7 @@ class _signinState extends State<signin> {
                     Container(
                       height: size.height / 1.7,
                       width: size.width / 1.3,
-                      decoration: BoxDecoration(
+                      decoration: const BoxDecoration(
                         color: Colors.white,
                         borderRadius: BorderRadius.all(Radius.circular(10.0)),
                       ),
@@ -83,27 +83,31 @@ class _signinState extends State<signin> {
                               height: size.height / 90,
                             ),
                             Padding(
-                              padding: EdgeInsets.only(
+                              padding: const EdgeInsets.only(
                                   left: 20.0, right: 20, bottom: 20),
                               child: MyTextField(
                                 myController: phoneController,
                                 fieldName: 'Enter Mobile No.',
                                 myIcon: Icons.call_outlined,
                                 prefixIconColor:
-                                    Color.fromRGBO(113, 40, 201, 80),
+                                    const Color.fromRGBO(113, 40, 201, 80),
                                 keyboard: TextInputType.text,
                                 maxlines: 1,
                                 onSaved: (value) {},
                               ),
                             ),
-                            submit(
+                            Submit(
                                 label: "Send Me OTP",
                                 width: size.width / 12,
                                 onCountSelected: () {}),
                             Row(
                               children: [
-                                Spacer(),
+                                const Spacer(),
                                 Theme(
+                                    data: ThemeData(
+                                      unselectedWidgetColor:
+                                          const Color.fromRGBO(113, 40, 201, 80),
+                                    ),
                                     child: Checkbox(
                                         value: isRememberMe,
                                         activeColor: Colors.deepPurple,
@@ -111,17 +115,13 @@ class _signinState extends State<signin> {
                                           setState(() {
                                             isRememberMe = !isRememberMe;
                                           });
-                                        }),
-                                    data: ThemeData(
-                                      unselectedWidgetColor:
-                                          Color.fromRGBO(113, 40, 201, 80),
-                                    )),
-                                Text("Get important updates on whatsapp",
+                                        })),
+                                const Text("Get important updates on whatsapp",
                                     style: TextStyle(
                                       fontSize: 10,
                                       color: Colors.grey,
                                     )),
-                                Spacer()
+                                const Spacer()
                               ],
                             ),
                             Padding(
@@ -130,22 +130,22 @@ class _signinState extends State<signin> {
                                 mainAxisAlignment: MainAxisAlignment.center,
                                 children: <Widget>[
                                   Container(
-                                    decoration: BoxDecoration(
+                                    decoration: const BoxDecoration(
                                       gradient: LinearGradient(
                                           colors: [
                                             Colors.deepPurpleAccent,
                                             Colors.deepPurple,
                                           ],
                                           begin:
-                                              const FractionalOffset(0.0, 0.0),
-                                          end: const FractionalOffset(1.0, 1.0),
+                                              FractionalOffset(0.0, 0.0),
+                                          end: FractionalOffset(1.0, 1.0),
                                           stops: [0.0, 1.0],
                                           tileMode: TileMode.clamp),
                                     ),
                                     width: size.width / 4,
                                     height: 1.0,
                                   ),
-                                  Padding(
+                                  const Padding(
                                     padding: EdgeInsets.only(
                                         left: 15.0, right: 15.0),
                                     child: Text(
@@ -159,15 +159,15 @@ class _signinState extends State<signin> {
                                     ),
                                   ),
                                   Container(
-                                    decoration: BoxDecoration(
+                                    decoration: const BoxDecoration(
                                       gradient: LinearGradient(
                                           colors: [
                                             Colors.deepPurple,
                                             Color.fromRGBO(113, 40, 201, 80),
                                           ],
                                           begin:
-                                              const FractionalOffset(0.0, 0.0),
-                                          end: const FractionalOffset(1.0, 1.0),
+                                              FractionalOffset(0.0, 0.0),
+                                          end: FractionalOffset(1.0, 1.0),
                                           stops: [0.0, 1.0],
                                           tileMode: TileMode.clamp),
                                     ),
@@ -177,28 +177,28 @@ class _signinState extends State<signin> {
                                 ],
                               ),
                             ),
-                            SizedBox(
+                            const SizedBox(
                               height: 20,
                             ),
                             Padding(
-                              padding: EdgeInsets.all(8.0),
+                              padding: const EdgeInsets.all(8.0),
                               child: TextButton(
                                 onPressed: () {
                                   Navigator.push(
                                     context,
                                     MaterialPageRoute(
                                       builder: (context) =>
-                                          const bottomnavbar(),
+                                          const BottomNavBar(),
                                     ),
                                   );
                                 },
                                 style: TextButton.styleFrom(
-                                  shape: RoundedRectangleBorder(
+                                  shape: const RoundedRectangleBorder(
                                       borderRadius: BorderRadius.all(
                                           Radius.circular(7.0))),
-                                  side: BorderSide(width: 2.0),
+                                  side: const BorderSide(width: 2.0),
                                 ),
-                                child: Padding(
+                                child: const Padding(
                                   padding: EdgeInsets.only(
                                       left: 20.0, right: 20, bottom: 5, top: 5),
                                   child: Text(
@@ -210,8 +210,8 @@ class _signinState extends State<signin> {
                                 ),
                               ),
                             ),
-                            Padding(
-                              padding: const EdgeInsets.all(13.0),
+                            const Padding(
+                              padding: EdgeInsets.all(13.0),
                               child: Text("Login using",
                                   style: TextStyle(fontSize: 10)),
                             ),
@@ -224,7 +224,7 @@ class _signinState extends State<signin> {
                                 ),
                               ),
                             ),
-                            SizedBox(
+                            const SizedBox(
                               height: 20,
                             )
                           ],

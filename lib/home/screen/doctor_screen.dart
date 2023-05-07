@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:myaarogyam/auth/login.dart';
 import 'package:myaarogyam/doctor_details/doctor_details_page.dart';
 
 class DoctorScreen extends StatelessWidget {
@@ -8,7 +7,7 @@ class DoctorScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color(0xFFFFFFFF),
+      backgroundColor: const Color(0xFFFFFFFF),
       body: SafeArea(
         child: SingleChildScrollView(
           child: Column(
@@ -23,20 +22,20 @@ class DoctorScreen extends StatelessWidget {
                           width: MediaQuery.of(context).size.width * 0.12,
                           decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(16),
-                            color: Color(0xFFFFFFFF),
-                            border: Border.all(color: Color(0xFFD7DEEA)),
+                            color: const Color(0xFFFFFFFF),
+                            border: Border.all(color: const Color(0xFFD7DEEA)),
                           ),
-                          child: Icon(
+                          child: const Icon(
                             Icons.arrow_back,
                             size: 18,
                             color: Color.fromARGB(255, 9, 9, 9),
                           )),
                     ),
                   ),
-                  SizedBox(
+                  const SizedBox(
                     width: 80,
                   ),
-                  Text(
+                  const Text(
                     'Doctors',
                     style: TextStyle(
                       fontSize: 18,
@@ -45,14 +44,14 @@ class DoctorScreen extends StatelessWidget {
                   )
                 ],
               ),
-              SizedBox(
+              const SizedBox(
                 height: 20,
               ),
               Container(
                 width: MediaQuery.of(context).size.width * 0.9,
                 height: MediaQuery.of(context).size.height * 0.07,
                 decoration: BoxDecoration(
-                  color: Color(
+                  color: const Color(
                     0xFFEEF6FC,
                   ),
                   borderRadius: BorderRadius.circular(18),
@@ -62,19 +61,19 @@ class DoctorScreen extends StatelessWidget {
                   children: [
                     IconButton(
                       onPressed: () {},
-                      icon: Icon(
+                      icon: const Icon(
                         Icons.search,
                         size: 18,
                       ),
-                      color: Color(
+                      color: const Color(
                         0xFF8AA0BC,
                       ),
                     ),
-                    Text(
+                    const Text(
                       'Search doctor',
                       style: TextStyle(color: Colors.grey, fontSize: 12),
                     ),
-                    SizedBox(
+                    const SizedBox(
                       width: 100,
                     ),
                     IconButton(
@@ -87,13 +86,13 @@ class DoctorScreen extends StatelessWidget {
                   ],
                 ),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 20,
               ),
               Column(
                 children: [
                   Row(
-                    children: [
+                    children: const [
                       Padding(padding: EdgeInsets.only(left: 20)),
                       Text(
                         'Live Doctors',
@@ -105,13 +104,13 @@ class DoctorScreen extends StatelessWidget {
                       ),
                     ],
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 20,
                   ),
                   SingleChildScrollView(
                     scrollDirection: Axis.horizontal,
                     child: Row(
-                      children: [
+                      children: const [
                         Padding(padding: EdgeInsets.only(left: 20)),
                         LiveDoc(),
                         LiveDoc(),
@@ -128,8 +127,8 @@ class DoctorScreen extends StatelessWidget {
               ),
               Row(
                 children: [
-                  Padding(padding: EdgeInsets.only(left: 20)),
-                  Text(
+                  const Padding(padding: EdgeInsets.only(left: 20)),
+                  const Text(
                     'Popular Doctors',
                     textAlign: TextAlign.start,
                     style: TextStyle(
@@ -140,7 +139,7 @@ class DoctorScreen extends StatelessWidget {
                   SizedBox(
                     width: MediaQuery.of(context).size.width * 0.4,
                   ),
-                  Text(
+                  const Text(
                     'See All',
                     textAlign: TextAlign.start,
                     style: TextStyle(
@@ -155,7 +154,7 @@ class DoctorScreen extends StatelessWidget {
                 height: MediaQuery.of(context).size.height * 0.02,
               ),
               ListTile(
-                visualDensity: VisualDensity(
+                visualDensity: const VisualDensity(
                   vertical: 4,
                 ),
                 leading: Container(
@@ -163,12 +162,12 @@ class DoctorScreen extends StatelessWidget {
                   width: 100,
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(10),
-                    image: DecorationImage(
+                    image: const DecorationImage(
                       image: AssetImage('assets/dr.png'),
                     ),
                   ),
                 ),
-                title: Text(
+                title: const Text(
                   'Dr. Mim Akhter',
                   style: TextStyle(
                     fontSize: 17,
@@ -178,7 +177,7 @@ class DoctorScreen extends StatelessWidget {
                 subtitle: Column(
                   children: [
                     Row(
-                      children: [
+                      children: const [
                         Text(
                           'Cardiologist in apolo hospital',
                           style: TextStyle(
@@ -188,11 +187,11 @@ class DoctorScreen extends StatelessWidget {
                         ),
                       ],
                     ),
-                    SizedBox(
+                    const SizedBox(
                       height: 10,
                     ),
                     Row(
-                      children: [
+                      children: const [
                         Icon(
                           Icons.star,
                           color: Colors.yellow,
@@ -217,11 +216,11 @@ class DoctorScreen extends StatelessWidget {
                   ],
                 ),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 30,
               ),
               ListTile(
-                visualDensity: VisualDensity(
+                visualDensity: const VisualDensity(
                   vertical: 4,
                 ),
                 leading: Container(
@@ -229,12 +228,12 @@ class DoctorScreen extends StatelessWidget {
                   width: 100,
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(10),
-                    image: DecorationImage(
+                    image: const DecorationImage(
                       image: AssetImage('assets/dr.png'),
                     ),
                   ),
                 ),
-                title: Text(
+                title: const Text(
                   'Dr. Mim Akhter',
                   style: TextStyle(
                     fontSize: 17,
@@ -244,7 +243,7 @@ class DoctorScreen extends StatelessWidget {
                 subtitle: Column(
                   children: [
                     Row(
-                      children: [
+                      children: const [
                         Text(
                           'Cardiologist in apolo hospital',
                           style: TextStyle(
@@ -254,10 +253,10 @@ class DoctorScreen extends StatelessWidget {
                         ),
                       ],
                     ),
-                    SizedBox(
+                    const SizedBox(
                       height: 10,
                     ),
-                    Row(children: [
+                    Row(children: const [
                       Icon(
                         Icons.star,
                         color: Colors.yellow,
@@ -281,11 +280,11 @@ class DoctorScreen extends StatelessWidget {
                   ],
                 ),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 30,
               ),
               ListTile(
-                visualDensity: VisualDensity(
+                visualDensity: const VisualDensity(
                   vertical: 4,
                 ),
                 leading: Container(
@@ -293,12 +292,12 @@ class DoctorScreen extends StatelessWidget {
                   width: 100,
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(10),
-                    image: DecorationImage(
+                    image: const DecorationImage(
                       image: AssetImage('assets/dr.png'),
                     ),
                   ),
                 ),
-                title: Text(
+                title: const Text(
                   'Dr. Mim Akhter',
                   style: TextStyle(
                     fontSize: 17,
@@ -308,7 +307,7 @@ class DoctorScreen extends StatelessWidget {
                 subtitle: Column(
                   children: [
                     Row(
-                      children: [
+                      children: const [
                         Text(
                           'Cardiologist in apolo hospital',
                           style: TextStyle(
@@ -318,10 +317,10 @@ class DoctorScreen extends StatelessWidget {
                         ),
                       ],
                     ),
-                    SizedBox(
+                    const SizedBox(
                       height: 10,
                     ),
-                    Row(children: [
+                    Row(children: const [
                       Icon(
                         Icons.star,
                         color: Colors.yellow,
@@ -345,11 +344,11 @@ class DoctorScreen extends StatelessWidget {
                   ],
                 ),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 30,
               ),
               ListTile(
-                visualDensity: VisualDensity(
+                visualDensity: const VisualDensity(
                   vertical: 4,
                 ),
                 leading: Container(
@@ -357,12 +356,12 @@ class DoctorScreen extends StatelessWidget {
                   width: 100,
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(10),
-                    image: DecorationImage(
+                    image: const DecorationImage(
                       image: AssetImage('assets/dr.png'),
                     ),
                   ),
                 ),
-                title: Text(
+                title: const Text(
                   'Dr. Mim Akhter',
                   style: TextStyle(
                     fontSize: 17,
@@ -372,7 +371,7 @@ class DoctorScreen extends StatelessWidget {
                 subtitle: Column(
                   children: [
                     Row(
-                      children: [
+                      children: const [
                         Text(
                           'Cardiologist in apolo hospital',
                           style: TextStyle(
@@ -382,10 +381,10 @@ class DoctorScreen extends StatelessWidget {
                         ),
                       ],
                     ),
-                    SizedBox(
+                    const SizedBox(
                       height: 10,
                     ),
-                    Row(children: [
+                    Row(children: const [
                       Icon(
                         Icons.star,
                         color: Colors.yellow,
@@ -409,11 +408,11 @@ class DoctorScreen extends StatelessWidget {
                   ],
                 ),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 30,
               ),
               ListTile(
-                visualDensity: VisualDensity(
+                visualDensity: const VisualDensity(
                   vertical: 4,
                 ),
                 leading: Container(
@@ -421,12 +420,12 @@ class DoctorScreen extends StatelessWidget {
                   width: 100,
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(10),
-                    image: DecorationImage(
+                    image: const DecorationImage(
                       image: AssetImage('assets/dr.png'),
                     ),
                   ),
                 ),
-                title: Text(
+                title: const Text(
                   'Dr. Mim Akhter',
                   style: TextStyle(
                     fontSize: 17,
@@ -436,7 +435,7 @@ class DoctorScreen extends StatelessWidget {
                 subtitle: Column(
                   children: [
                     Row(
-                      children: [
+                      children: const [
                         Text(
                           'Cardiologist in apolo hospital',
                           style: TextStyle(
@@ -446,10 +445,10 @@ class DoctorScreen extends StatelessWidget {
                         ),
                       ],
                     ),
-                    SizedBox(
+                    const SizedBox(
                       height: 10,
                     ),
-                    Row(children: [
+                    Row(children: const [
                       Icon(
                         Icons.star,
                         color: Colors.yellow,
@@ -498,7 +497,7 @@ class _LiveDocState extends State<LiveDoc> {
             Navigator.push(
               context,
               MaterialPageRoute(
-                builder: (context) => doctor_page_detials(),
+                builder: (context) => const DoctorDetailsPage(),
               ),
             );
           },
@@ -507,7 +506,7 @@ class _LiveDocState extends State<LiveDoc> {
             width: 91,
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(10),
-              image: DecorationImage(
+              image: const DecorationImage(
                 image: AssetImage('assets/dr.png'),
               ),
             ),

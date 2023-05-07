@@ -2,14 +2,14 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:myaarogyam/auth/widget/button.dart';
 
-class doctor_page_detials extends StatefulWidget {
-  const doctor_page_detials({Key? key}) : super(key: key);
+class DoctorDetailsPage extends StatefulWidget {
+  const DoctorDetailsPage({Key? key}) : super(key: key);
 
   @override
-  State<doctor_page_detials> createState() => _doctor_page_detialsState();
+  State<DoctorDetailsPage> createState() => _DoctorDetailsPageState();
 }
 
-class _doctor_page_detialsState extends State<doctor_page_detials> {
+class _DoctorDetailsPageState extends State<DoctorDetailsPage> {
   @override
   Widget build(BuildContext context) {
     final size = MediaQuery.of(context).size;
@@ -27,11 +27,11 @@ class _doctor_page_detialsState extends State<doctor_page_detials> {
                 Container(
                   height: size.height / 4,
                   width: size.width,
-                  color: Color.fromRGBO(28, 107, 164, 100),
+                  color: const Color.fromRGBO(28, 107, 164, 100),
                   child: Column(
                     children: [
                       Padding(
-                        padding: EdgeInsets.all(15.0),
+                        padding: const EdgeInsets.all(15.0),
                         child: Row(
                           children: [
                             GestureDetector(
@@ -42,10 +42,10 @@ class _doctor_page_detialsState extends State<doctor_page_detials> {
                                 "assets/back.svg",
                               ),
                             ),
-                            SizedBox(
+                            const SizedBox(
                               width: 30,
                             ),
-                            Text(
+                            const Text(
                               '  Details',
                               style: TextStyle(
                                   color: Colors.white,
@@ -55,7 +55,7 @@ class _doctor_page_detialsState extends State<doctor_page_detials> {
                           ],
                         ),
                       ),
-                      SizedBox(
+                      const SizedBox(
                         height: 50,
                       ),
                     ],
@@ -64,29 +64,29 @@ class _doctor_page_detialsState extends State<doctor_page_detials> {
               ]),
               Column(
                 children: [
-                  SizedBox(
+                  const SizedBox(
                     height: 130,
                   ),
                   Center(
                     child: Container(
                       height: size.height / 7,
                       width: size.width / 1.2,
-                      decoration: BoxDecoration(
+                      decoration: const BoxDecoration(
                         color: Colors.white,
                         borderRadius: BorderRadius.all(Radius.circular(20.0)),
                       ),
                       child: Row(
                         children: [
-                          SizedBox(
+                          const SizedBox(
                             width: 10,
                           ),
                           Image.asset("assets/dr.png"),
-                          SizedBox(
+                          const SizedBox(
                             width: 10,
                           ),
                           Column(
                             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                            children: [
+                            children: const [
                               SizedBox(
                                 height: 10,
                               ),
@@ -113,7 +113,7 @@ class _doctor_page_detialsState extends State<doctor_page_detials> {
                       ),
                     ),
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 40,
                   ),
                   Row(
@@ -122,14 +122,14 @@ class _doctor_page_detialsState extends State<doctor_page_detials> {
                       Container(
                         height: size.height / 8,
                         width: size.width / 4,
-                        decoration: BoxDecoration(
+                        decoration: const BoxDecoration(
                           color: Color.fromRGBO(28, 107, 164, 100),
                           borderRadius: BorderRadius.all(Radius.circular(20.0)),
                         ),
                         child: Center(
                           child: Column(
                             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                            children: [
+                            children: const [
                               Text("Patients",
                                   style: TextStyle(
                                       fontSize: 12,
@@ -149,14 +149,14 @@ class _doctor_page_detialsState extends State<doctor_page_detials> {
                       Container(
                         height: size.height / 8,
                         width: size.width / 4,
-                        decoration: BoxDecoration(
+                        decoration: const BoxDecoration(
                           color: Color.fromRGBO(28, 107, 164, 100),
                           borderRadius: BorderRadius.all(Radius.circular(20.0)),
                         ),
                         child: Center(
                           child: Column(
                             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                            children: [
+                            children: const [
                               Text("Exp.",
                                   style: TextStyle(
                                       fontSize: 12,
@@ -176,14 +176,14 @@ class _doctor_page_detialsState extends State<doctor_page_detials> {
                       Container(
                         height: size.height / 8,
                         width: size.width / 4,
-                        decoration: BoxDecoration(
+                        decoration: const BoxDecoration(
                           color: Color.fromRGBO(28, 107, 164, 100),
                           borderRadius: BorderRadius.all(Radius.circular(20.0)),
                         ),
                         child: Center(
                           child: Column(
                             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                            children: [
+                            children: const [
                               Text("Rating",
                                   style: TextStyle(
                                       fontSize: 12,
@@ -202,15 +202,15 @@ class _doctor_page_detialsState extends State<doctor_page_detials> {
                       ),
                     ],
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 10,
                   ),
                   Padding(
-                    padding: EdgeInsets.all(15.0),
+                    padding: const EdgeInsets.all(15.0),
                     child: Column(
                       children: [
                         Row(
-                          children: [
+                          children: const [
                             Expanded(
                                 child: Text("About",
                                     style: TextStyle(
@@ -220,7 +220,7 @@ class _doctor_page_detialsState extends State<doctor_page_detials> {
                           ],
                         ),
                         Row(
-                          children: [
+                          children: const [
                             Expanded(
                               child: Text(
                                 "MBBS. Ph.D.. Fellow , International College of Surgeons. \n \n "
@@ -236,14 +236,14 @@ class _doctor_page_detialsState extends State<doctor_page_detials> {
                       ],
                     ),
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 20,
                   ),
                   Center(
                     child: Container(
                       height: size.height / 10,
                       width: size.width / 1.2,
-                      decoration: BoxDecoration(
+                      decoration: const BoxDecoration(
                         color: Colors.white,
                         borderRadius: BorderRadius.all(Radius.circular(20.0)),
                       ),
@@ -255,19 +255,19 @@ class _doctor_page_detialsState extends State<doctor_page_detials> {
                           Container(
                               height: size.height / 14,
                               width: size.width / 6,
-                              decoration: BoxDecoration(
+                              decoration: const BoxDecoration(
                                 color: Color.fromRGBO(28, 107, 164, 100),
                                 borderRadius:
                                     BorderRadius.all(Radius.circular(20.0)),
                               ),
                               child: Center(
                                   child: SvgPicture.asset("assets/clock.svg"))),
-                          SizedBox(
+                          const SizedBox(
                             width: 20,
                           ),
                           Column(
                             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                            children: [
+                            children: const [
                               Text(
                                 "Availablity",
                                 style: TextStyle(
@@ -283,8 +283,8 @@ class _doctor_page_detialsState extends State<doctor_page_detials> {
                               ),
                             ],
                           ),
-                          Spacer(),
-                          Padding(
+                          const Spacer(),
+                          const Padding(
                             padding: EdgeInsets.all(12.0),
                             child: Icon(
                               Icons.chevron_right_outlined,
@@ -299,7 +299,7 @@ class _doctor_page_detialsState extends State<doctor_page_detials> {
                   SizedBox(
                     height: MediaQuery.of(context).size.height / 30,
                   ),
-                  submit(
+                  Submit(
                     label: 'Book Now',
                     onCountSelected: () {},
                     width: 100,

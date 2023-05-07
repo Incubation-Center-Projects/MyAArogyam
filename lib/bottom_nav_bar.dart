@@ -1,35 +1,37 @@
+// ignore_for_file: non_constant_identifier_names
+
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/svg.dart';
 import 'package:myaarogyam/Report_file.dart';
-import 'package:myaarogyam/accounts/screen/personal_information.dart';
 import 'package:myaarogyam/accounts/screen/profile.dart';
-import 'package:myaarogyam/doctor_details/doctor_details_page.dart';
 import 'package:myaarogyam/home/screen/doctor_screen.dart';
 import 'package:myaarogyam/home/screen/home_page.dart';
 import 'package:myaarogyam/home/screen/schedule.dart';
 
-class bottomnavbar extends StatefulWidget {
-  const bottomnavbar({super.key});
+class BottomNavBar extends StatefulWidget {
+  const BottomNavBar({super.key});
 
   @override
-  State<bottomnavbar> createState() => _bottomnavbarState();
+  State<BottomNavBar> createState() => _BottomNavBarState();
 }
 
-class _bottomnavbarState extends State<bottomnavbar> {
+class _BottomNavBarState extends State<BottomNavBar> {
   int current_index = 0;
+  final PageController _pageController = PageController();
 
   final List<Widget> pages = [
-    const Home_Screen(),
-    const schedule(),
+    const HomeScreen(),
+    const Schedule(),
     const Report(),
     const DoctorScreen(),
     const Profile()
   ];
 
-  void OnTapped(int index) {
+  void onTapped(int index) {
     setState(
       () {
         current_index = index;
+        _pageController.animateToPage(index,
+            duration: const Duration(milliseconds: 200), curve: Curves.easeOut);
       },
     );
   }
@@ -37,7 +39,15 @@ class _bottomnavbarState extends State<bottomnavbar> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: pages[current_index],
+      body: SizedBox.expand(
+        child: PageView(
+          controller: _pageController,
+          children: pages,
+          onPageChanged: (index) {
+            setState(() => current_index = index);
+          },
+        ),
+      ),
       bottomNavigationBar: BottomNavigationBar(
         backgroundColor: Colors.white,
         type: BottomNavigationBarType.fixed,
@@ -47,8 +57,8 @@ class _bottomnavbarState extends State<bottomnavbar> {
         selectedFontSize: 16.0,
         unselectedFontSize: 12,
         currentIndex: current_index,
-        onTap: OnTapped,
-        items: <BottomNavigationBarItem>[
+        onTap: onTapped,
+        items: const <BottomNavigationBarItem>[
           BottomNavigationBarItem(
             icon: Icon(
               Icons.home,

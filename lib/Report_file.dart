@@ -1,3 +1,5 @@
+// ignore_for_file: file_names
+
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
@@ -20,10 +22,10 @@ class _ReportState extends State<Report> {
             child: Column(
               children: [
                 Padding(
-                  padding: EdgeInsets.all(15.0),
+                  padding: const EdgeInsets.all(15.0),
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
+                    children: const [
                       Text(
                         "Report",
                         style: TextStyle(
@@ -41,31 +43,31 @@ class _ReportState extends State<Report> {
                     ],
                   ),
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 10,
                 ),
                 Center(
                   child: Container(
                     height: size.height / 5,
                     width: size.width / 1.1,
-                    decoration: BoxDecoration(
+                    decoration: const BoxDecoration(
                         color: Color.fromRGBO(220, 237, 249, 100),
                         borderRadius: BorderRadius.all(Radius.circular(25))),
                     child: Row(
                       children: [
                         Column(
                           children: [
-                            Spacer(),
-                            Padding(
-                              padding: const EdgeInsets.all(8.0),
+                            const Spacer(),
+                            const Padding(
+                              padding: EdgeInsets.all(8.0),
                               child: Text(
                                 "Heart Rate",
                                 style: TextStyle(fontSize: 20),
                               ),
                             ),
-                            Spacer(),
+                            const Spacer(),
                             Row(
-                              children: [
+                              children: const [
                                 Text(
                                   "96",
                                   style: TextStyle(fontSize: 45),
@@ -76,49 +78,49 @@ class _ReportState extends State<Report> {
                                 )
                               ],
                             ),
-                            Spacer()
+                            const Spacer()
                           ],
                         ),
-                        Spacer(),
+                        const Spacer(),
                         SvgPicture.asset("assets/bp.svg")
                       ],
                     ),
                   ),
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 20,
                 ),
                 Row(
                   children: [
-                    Spacer(),
+                    const Spacer(),
                     Container(
                       height: size.height / 5,
                       width: size.width / 2.3,
-                      decoration: BoxDecoration(
+                      decoration: const BoxDecoration(
                           color: Color.fromRGBO(245, 225, 233, 100),
                           borderRadius: BorderRadius.all(Radius.circular(25))),
                       child: Row(
                         children: [
                           Column(
                             children: [
-                              Spacer(),
+                              const Spacer(),
                               SvgPicture.asset("assets/blood.svg"),
-                              Spacer(),
-                              Text("   Blood Group",
+                              const Spacer(),
+                              const Text("   Blood Group",
                                   style: TextStyle(fontSize: 14)),
-                              Spacer(),
-                              Text(
+                              const Spacer(),
+                              const Text(
                                 "A+",
                                 style: TextStyle(fontSize: 37),
                               ),
-                              Spacer(),
+                              const Spacer(),
                             ],
                           ),
-                          Spacer(),
+                          const Spacer(),
                           Column(
-                            children: [
+                            children: const [
                               Padding(
-                                padding: const EdgeInsets.all(8.0),
+                                padding: EdgeInsets.all(8.0),
                                 child: Icon(Icons.more_horiz),
                               ),
                               Spacer()
@@ -127,24 +129,24 @@ class _ReportState extends State<Report> {
                         ],
                       ),
                     ),
-                    Spacer(),
+                    const Spacer(),
                     Container(
                       height: size.height / 5,
                       width: size.width / 2.3,
-                      decoration: BoxDecoration(
+                      decoration: const BoxDecoration(
                           color: Color.fromRGBO(250, 243, 216, 100),
                           borderRadius: BorderRadius.all(Radius.circular(25))),
                       child: Row(
                         children: [
                           Column(
                             children: [
-                              Spacer(),
+                              const Spacer(),
                               SvgPicture.asset("assets/weight.svg"),
-                              Spacer(),
-                              Text("   Weight", style: TextStyle(fontSize: 14)),
-                              Spacer(),
+                              const Spacer(),
+                              const Text("   Weight", style: TextStyle(fontSize: 14)),
+                              const Spacer(),
                               Row(
-                                children: [
+                                children: const [
                                   SizedBox(
                                     width: 10,
                                   ),
@@ -158,14 +160,14 @@ class _ReportState extends State<Report> {
                                   )
                                 ],
                               ),
-                              Spacer(),
+                              const Spacer(),
                             ],
                           ),
-                          Spacer(),
+                          const Spacer(),
                           Column(
-                            children: [
+                            children: const [
                               Padding(
-                                padding: const EdgeInsets.all(8.0),
+                                padding: EdgeInsets.all(8.0),
                                 child: Icon(Icons.more_horiz),
                               ),
                               Spacer()
@@ -174,13 +176,13 @@ class _ReportState extends State<Report> {
                         ],
                       ),
                     ),
-                    Spacer()
+                    const Spacer()
                   ],
                 ),
                 Padding(
-                  padding: EdgeInsets.all(15.0),
+                  padding: const EdgeInsets.all(15.0),
                   child: Row(
-                    children: [
+                    children: const [
                       Expanded(
                           child: Text(
                         "Latest Report",
@@ -196,7 +198,7 @@ class _ReportState extends State<Report> {
                   child: Container(
                     height: size.height / 8,
                     width: size.width / 1.1,
-                    decoration: BoxDecoration(
+                    decoration: const BoxDecoration(
                         boxShadow: [
                           BoxShadow(
                             color: Colors.grey,
@@ -215,13 +217,13 @@ class _ReportState extends State<Report> {
                             decoration: BoxDecoration(
                                 color: Colors.blueAccent.shade100,
                                 borderRadius:
-                                    BorderRadius.all(Radius.circular(25))),
+                                    const BorderRadius.all(Radius.circular(25))),
                           ),
                         ),
                         Padding(
                           padding: const EdgeInsets.all(8.0),
                           child: Column(
-                            children: [
+                            children: const [
                               Spacer(),
                               Text(
                                 "General Health",
@@ -238,9 +240,9 @@ class _ReportState extends State<Report> {
                             ],
                           ),
                         ),
-                        Spacer(),
-                        Padding(
-                          padding: const EdgeInsets.all(8.0),
+                        const Spacer(),
+                        const Padding(
+                          padding: EdgeInsets.all(8.0),
                           child: Icon(
                             Icons.more_vert,
                             color: Colors.grey,
@@ -250,14 +252,14 @@ class _ReportState extends State<Report> {
                     ),
                   ),
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 20,
                 ),
                 Center(
                   child: Container(
                     height: size.height / 8,
                     width: size.width / 1.1,
-                    decoration: BoxDecoration(
+                    decoration: const BoxDecoration(
                         boxShadow: [
                           BoxShadow(
                             color: Colors.grey,
@@ -276,13 +278,13 @@ class _ReportState extends State<Report> {
                             decoration: BoxDecoration(
                                 color: Colors.greenAccent.shade100,
                                 borderRadius:
-                                    BorderRadius.all(Radius.circular(25))),
+                                    const BorderRadius.all(Radius.circular(25))),
                           ),
                         ),
                         Padding(
                           padding: const EdgeInsets.all(8.0),
                           child: Column(
-                            children: [
+                            children: const [
                               Spacer(),
                               Text(
                                 "Moral Health",
@@ -299,9 +301,9 @@ class _ReportState extends State<Report> {
                             ],
                           ),
                         ),
-                        Spacer(),
-                        Padding(
-                          padding: const EdgeInsets.all(8.0),
+                        const Spacer(),
+                        const Padding(
+                          padding: EdgeInsets.all(8.0),
                           child: Icon(
                             Icons.more_vert,
                             color: Colors.grey,

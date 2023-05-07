@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-class submit extends StatelessWidget {
-  submit(
+class Submit extends StatelessWidget {
+  const Submit(
       {Key? key,
       required this.label,
       required this.width,
@@ -15,11 +15,11 @@ class submit extends StatelessWidget {
   Widget build(BuildContext context) {
     final size = MediaQuery.of(context).size;
     return Padding(
-      padding: EdgeInsets.only(left: 30.0, right: 30, bottom: 10),
+      padding: const EdgeInsets.only(left: 30.0, right: 30, bottom: 10),
       child: MaterialButton(
-          shape: RoundedRectangleBorder(
+          shape: const RoundedRectangleBorder(
               borderRadius: BorderRadius.all(Radius.circular(7.0))),
-          color: Color.fromRGBO(28, 107, 164, 20),
+          color: const Color.fromRGBO(28, 107, 164, 20),
           highlightColor: Colors.white,
           splashColor: Colors.deepPurpleAccent,
           child: Padding(
@@ -29,7 +29,7 @@ class submit extends StatelessWidget {
               ),
               child: Text(
                 label,
-                style: TextStyle(
+                style: const TextStyle(
                     color: Colors.white,
                     fontWeight: FontWeight.bold,
                     fontSize: 15),
